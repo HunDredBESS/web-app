@@ -1,0 +1,94 @@
+{
+  "importlib": [
+    {
+      "namelib": "",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "None",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "pandas",
+      "title": "",
+      "elements": {
+        "code1": "import pandas as pd",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "numpy",
+      "title": "",
+      "elements": {
+        "code1": "import numpy as np",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "seaborn",
+      "title": "",
+      "elements": {
+        "code1": "import seabon as sns",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "tensorflow",
+      "title": "",
+      "elements": {
+        "code1": "import tensorflow as tf",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "matplotlib",
+      "title": "",
+      "elements": {
+        "code1": "import matplotlib.pyplot as plt",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "pytorch",
+      "title": "",
+      "elements": {
+        "code1": "import pytorch",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "requests",
+      "title": "",
+      "elements": {
+        "code1": "import requests",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "sklearn.preprocessing",
+      "title": "",
+      "elements": {
+        "code1": "from sklearn.preprocessing import MinMaxScaler, StandardScaler",
+        "code2": "",
+        "code3": ""
+      }
+    }
+  ]
+}

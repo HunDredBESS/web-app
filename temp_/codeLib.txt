@@ -1,0 +1,28 @@
+// export type codeType = {
+//     None:string
+// 	seabon:string
+// 	matplotelib:string
+// 	tensorflow:string
+// 	numpy:string
+//     pandas:string
+// }
+
+export type codeType = {
+    None:string
+	seabon:string
+	matplotelib:string
+	tensorflow:string
+	numpy:string
+    pandas:string
+}
+
+const codeLib: codeType = {
+    None:``,
+	seabon:`import seaborn as sns`,
+	matplotelib:`import matplotlib.pyplot as plt`,
+	tensorflow:`import tensorflow as tf`,
+	numpy:`import numpy as np`,
+    pandas:`import pandas as pd`
+};
+
+export default codeLib

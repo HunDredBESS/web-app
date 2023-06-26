@@ -1,0 +1,85 @@
+{
+  "dataCollection": [
+    {
+      "name": "",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "name": "None",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "name": "read csv",
+      "title": "read .csv with pandas",
+      "elements": {
+        "code1": "data = pd.read_csv('",
+        "code2": "')",
+        "code3": "",
+        "comment1": "# Load data from a CSV file",
+        "comment2": ""
+        
+      }
+    },
+    {
+      "name": "API",
+      "title": "",
+      "elements": {
+        "code1": "response = requests.get",
+        "code2": "data = response.json()",
+        "code3": "",
+        "comment1": "# Make a GET request to the API",
+        "comment2": "# Process the response as JSON data"
+      }
+    },
+    {
+      "name": "json to data frame",
+      "title": "json to data frame",
+      "elements": {
+        "code1": "with open('data.json', 'r') as json_file:",
+        "code2": "    data = json_file.read()",
+        "code3": "df = pd.read_json(data)",
+        "comment1": "Read the JSON data from a file",
+        "comment2": "# Create a DataFrame from the JSON data"
+      }
+    },
+    {
+      "name": "tensorflow",
+      "title": "",
+      "elements": {
+        "code1": "import tensorflow as tf",
+        "code2": "",
+        "code3": "",
+        "comment1": "# Make a GET request to the API",
+        "comment2": "# Process the response as JSON data"
+      }
+    },
+    {
+      "name": "matplotlib",
+      "title": "",
+      "elements": {
+        "code1": "import matplotlib.pyplot as plt",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "name": "pytorch",
+      "title": "",
+      "elements": {
+        "code1": "import pytorch",
+        "code2": "",
+        "code3": ""
+      }
+    }
+  ]
+}

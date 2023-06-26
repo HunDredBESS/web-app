@@ -1,0 +1,39 @@
+"use client"
+import React, { useState, useRef, useEffect, FormEvent} from 'react'
+import codeLib from './codeLib';
+
+interface Props { 
+    childToParent: (value: string) => void 
+}
+
+const ImportChild: React.FC<Props> = ({childToParent}) => {
+    const [languageDemo, changeDemo] = useState<string>(codeLib["None"]);
+    const [iduni, iduniSet] = useState<string>("");
+
+    const uniqueId = () => parseInt(Date.now() * Math.random()).toString();
+
+    const childToBox = (event: React.ChangeEvent<HTMLSelectElement>) => {
+              changeDemo(event.target.value);
+              childToParent(codeLib[event.target.value]);
+    }
+
+    const options:string[] = ['pandas', 'numpy', 'matplotelib', 'tensorflow', 'seabon'];
+
+    useEffect(() => {
+      iduniSet(uniqueId());
+    }, []);
+
+  return (
+        <>
+        <div id={iduni} className='col-start-1 col-end-4 box-border h-auto w-auto p-3 rounded-lg bg-white mt-1'>
+              Import library
+              <select className='box-border h-auto w-auto p-1 rounded-lg bg-white ml-10 items-center drop-shadow-md' onChange={childToBox}>
+                {options.map((option, index) => { 
+                    return <option key={index} placeholder='Please choose option' > {option} </option> })}
+              </select>
+        </div>
+        </>
+  )
+}
+
+export default ImportChild

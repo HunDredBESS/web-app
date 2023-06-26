@@ -1,0 +1,71 @@
+"use client";
+import React, { useState } from "react";
+import csv from "csvtojson";
+
+interface DataItem {
+  // Define the structure of each item in your CSV data
+  // For example:
+  id: number;
+  name: string;
+  age: number;
+}
+
+const Home: React.FC = () => {
+  const [csvData, setCSVData] = useState<object[]>([]);
+  const [columnNames, setColumnNames] = useState<string[]>([]);
+
+  const handleFileLoad = async (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = async (e) => {
+        const text = e.target?.result as string;
+        const jsonData = await csv().fromString(text);
+        const headerRow = jsonData[0];
+        const data = jsonData.slice(1);
+
+        if (data.length > 0) {
+          const names = Object.keys(data[0]);
+          setColumnNames(Array.isArray(names) ? names : []);
+        }
+
+        setCSVData(data);
+      };
+      reader.readAsText(file);
+    }
+  };
+
+  console.log("ColumnName:", columnNames);
+  console.log("Data:", csvData);
+
+  return (
+    <div className="text-white">
+      <h1>CSV File Reader</h1>
+      <input type="file" accept=".csv" onChange={handleFileLoad} />
+      <table className="text-white">
+        <thead>
+          <tr>
+            {Array.isArray(columnNames) &&
+              columnNames.map((columnName, index) => (
+                <th key={index}>{columnName}</th>
+              ))}
+          </tr>
+        </thead>
+        <tbody>
+          {csvData.map((item, index) => (
+            <tr key={index}>
+              {Array.isArray(columnNames) &&
+                columnNames.map((columnName, columnIndex) => (
+                  <td key={columnIndex}>{item[columnName]}</td>
+                ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
+export default Home;

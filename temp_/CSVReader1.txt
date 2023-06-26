@@ -1,0 +1,91 @@
+"use client";
+import React, { useState } from "react";
+import { Converter } from "csvtojson";
+
+interface DataItem {
+  // Define the structure of each item in your CSV data
+  // For example:
+  id: number;
+  name: string;
+  age: number;
+}
+
+const Home: React.FC = () => {
+  const [csvData, setCSVData] = useState<object[]>([]);
+  const [columnNames, setColumnNames] = useState<string[]>([]);
+
+  const handleFileLoad = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = async (e) => {
+        const text = e.target?.result as string;
+        const converter = new Converter({ toArrayString: true });
+        const jsonData = await converter.fromString(text);
+        const headerRow = jsonData[0];
+        const data = jsonData.slice(1);
+
+        // Extract column names
+        if (data.length > 0) {
+          const names = Object.keys(data[0]);
+          // setColumnNames(names);
+          setColumnNames(Array.isArray(names) ? names : []);
+        }
+
+        // setColumnNames(Array.isArray(headerRow) ? headerRow : []);
+        // setColumnNames(headerRow);
+
+        setCSVData(data);
+      };
+      reader.readAsText(file);
+    }
+  };
+  console.log("ColumnName :", columnNames);
+  console.log("Data : ", csvData);
+
+  return (
+    <div className="bg-gray-100 min-h-min p-4">
+      <h1 className="text-2xl font-bold mb-4">CSV File Reader</h1>
+      <input
+        type="file"
+        accept=".csv"
+        onChange={handleFileLoad}
+        className="py-2 px-4 rounded bg-white border border-gray-300"
+      />
+      <div className="table-container mt-4">
+        <table className="w-full">
+          <thead>
+            <tr>
+              {Array.isArray(columnNames) &&
+                columnNames.map((columnName, index) => (
+                  <th
+                    key={index}
+                    className="py-2 px-4 bg-gray-200 font-medium text-gray-700"
+                  >
+                    {columnName}
+                  </th>
+                ))}
+            </tr>
+          </thead>
+          <tbody>
+            {csvData.map((item, index) => (
+              <tr key={index}>
+                {Array.isArray(columnNames) &&
+                  columnNames.map((columnName, columnIndex) => (
+                    <td
+                      key={columnIndex}
+                      className="py-2 px-4 border-b border-gray-300"
+                    >
+                      {item[columnName]}
+                    </td>
+                  ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+};
+
+export default Home;

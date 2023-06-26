@@ -1,0 +1,36 @@
+You can read data from a CSV file using the pandas
+    # Load data from a CSV file
+    data = pd.read_csv('data.csv')
+
+Collecting Data from an API:
+    # Make a GET request to the API
+    response = requests.get('https://api.example.com/data')
+    # Process the response
+    data = response.json()
+
+Collecting Data from an API convert to dataframe:
+    # Make a GET request to the API
+    response = requests.get('https://data.wa.gov/api/views/f6w7-q2d2/rows')
+
+    # Process the response as JSON data
+    data = response.json()
+
+    # Extract the rows from the JSON data
+    rows = data['data']
+
+    # Extract the column names from the JSON metadata
+    column_names = [column['name'] for column in data['meta']['view']['columns']]
+
+    # Create a DataFrame from the rows and column names
+    df = pd.DataFrame(rows, columns=column_names)
+
+Read json to data frame
+    # Read the JSON data from a file
+    with open('data.json', 'r') as json_file:
+        data = json_file.read()
+
+    # Create a DataFrame from the JSON data
+    df = pd.read_json(data)
+
+    # Display the DataFrame
+    print(df.head())

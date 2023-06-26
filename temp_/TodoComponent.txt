@@ -1,0 +1,25 @@
+import React from 'react'
+import { Todo } from '@/app/todo/page'
+
+type TodoProps = Todo &{
+    toggleDone: (id: number) =>void,
+    deleteTodo: (id: number) =>void
+}
+
+function TodoComponent({id, todo, isDone, toggleDone, deleteTodo}: TodoProps) {
+  return (
+    <li 
+        className="grid grid-cols-2"
+    >
+        <div className={isDone ? "line-through" : ""}
+            onClick={() => toggleDone(id)}> 
+            <p>{todo}</p>
+        </div>
+        <div>
+            <button className='text-right bg-orange-500' onClick={() => deleteTodo(id)}>Delete</button>
+        </div>
+    </li>
+  )
+}
+
+export default TodoComponent

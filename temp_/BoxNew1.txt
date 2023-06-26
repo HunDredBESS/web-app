@@ -1,0 +1,29 @@
+import React from 'react';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { solarizedlight } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { FaCopy } from 'react-icons/fa';
+import copy from 'copy-to-clipboard';
+
+interface BoxNewProps {
+  code: string;
+}
+
+const BoxNew: React.FC<BoxNewProps> = ({ code }) => {
+  const handleCopy = () => {
+    copy(code);
+  };
+
+  return (
+    <SyntaxHighlighter
+      language="python"
+      style={solarizedlight}
+      className="text-sm font-mono bg-gray-100 p-4 rounded-lg h-full"
+      icon={<FaCopy />}
+      onCopy={handleCopy}
+    >
+      {code}
+    </SyntaxHighlighter>
+  );
+};
+
+export default BoxNew;

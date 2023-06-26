@@ -1,0 +1,108 @@
+"use cilent";
+import React, { useState, useRef } from "react";
+import { Converter } from "csvtojson";
+
+const Home: React.FC = () => {
+  const [csvData, setCSVData] = useState<object[]>([]);
+  const [columnNames, setColumnNames] = useState<string[]>([]);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleFileLoad = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = async (e) => {
+        const text = e.target?.result as string;
+        const converter = new Converter({ toArrayString: true });
+        const jsonData = await converter.fromString(text);
+        const headerRow = jsonData[0];
+        const data = jsonData.slice(1);
+
+        // Extract column names
+        if (data.length > 0) {
+          const names = Object.keys(data[0]);
+          // setColumnNames(names);
+          setColumnNames(Array.isArray(names) ? names : []);
+          // setColumnNames(Array.isArray(headerRow) ? headerRow : []);
+          setCSVData(data);
+        } else {
+          setCSVData([csvData]);
+          setColumnNames([columnNames]);
+        }
+        
+      };
+      reader.readAsText(file);
+    } else {
+      // Clear the CSV data and column names when no file is selected
+      setCSVData([]);
+      setColumnNames([]);
+    }
+  };
+
+  const handleClearFile = () => {
+    if (fileInputRef.current) {
+      fileInputRef.current.value = ""; // Clear the file input value
+      setCSVData([]);
+      setColumnNames([]);
+    }
+  };
+
+  const isTableVisible = csvData.length > 0; // Check if CSV data is available
+
+  return (
+    <div className="bg-gray-100 min-h-fit p-4">
+      <h1 className="text-2xl font-bold mb-4">CSV File Reader</h1>
+      <div className="flex items-center mb-4">
+        <input
+          ref={fileInputRef}
+          type="file"
+          accept=".csv"
+          onChange={handleFileLoad}
+          className="py-2 px-4 rounded bg-white border border-gray-300"
+        />
+        {isTableVisible && (
+          <button
+            onClick={handleClearFile}
+            className="ml-2 py-2 px-4 rounded bg-red-500 text-white"
+          >
+            Clear
+          </button>
+        )}
+      </div>
+      {isTableVisible && (
+        <div className="table-container mt-4">
+          <table className="w-full">
+            <thead>
+              <tr>
+                {columnNames.map((columnName, index) => (
+                  <th
+                    key={index}
+                    className="py-2 px-4 bg-gray-200 font-medium text-gray-700"
+                  >
+                    {columnName}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {csvData.map((item, index) => (
+                <tr key={index}>
+                  {columnNames.map((columnName, columnIndex) => (
+                    <td
+                      key={columnIndex}
+                      className="py-2 px-4 border-b border-gray-300"
+                    >
+                      {item[columnName]}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Home;
