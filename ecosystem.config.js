@@ -9,7 +9,7 @@ module.exports = {
   		host : '34.124.203.184',
   		ref : 'origin/main',
   		repo : 'git@github.com:HunDredBESS/web-dns.git',
-  		path : '/home/web-app',
+  		path : '/home/robo/web-app',
   		'pre-deploy-local' : '',
   		'post-deploy' : 'source ~/.nvm/nvm.sh && npm install && npm run build && pm2 reload ecosystem.config.js --env production',
   		'pre-setup' : '',
