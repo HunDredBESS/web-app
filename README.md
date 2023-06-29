@@ -32,4 +32,8 @@ pm2 start npm --name  "TestBlockCode" -- start
 https://github.com/nvm-sh/nvm
 https://www.npmjs.com/package/pm2
 
+// exits repo old
 git remote rm origin
+
+git add .
+git commit -m "new hub"
