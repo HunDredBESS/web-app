@@ -34,6 +34,15 @@ export default function Home({}: Props) {
             <p></p>
           </div>
         </Link>
+        <Link href="/TimeSeries">
+          <div className="box-border h-32 w-auto p-5 rounded-lg bg-gradient-to-r from-blue-950 to-blue-800 border-solid hover:text-white">
+            <h2 className="text-2xl lg:text-4xl sm:text-2xl ">
+             Time Series
+            </h2>
+            <h2 className="text-4xl"></h2>
+            <p></p>
+          </div>
+        </Link>
       </div>
     </div>
   );
