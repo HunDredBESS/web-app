@@ -4,7 +4,8 @@ module.exports = {
   }],
   deploy : {
   	production : {
-  		user : 'roikao_nine',
+      key : 'key-robo.pem',
+  		user : 'robo',
   		host : '34.124.203.184',
   		ref : 'origin/main',
   		repo : 'git@github.com:HunDredBESS/web-dns.git',
