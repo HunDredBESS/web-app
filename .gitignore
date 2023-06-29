@@ -35,4 +35,4 @@ yarn-error.log*
 next-env.d.ts
 
 # key acess ssh vm
-key-robo.pem
+.key-robo.pem
