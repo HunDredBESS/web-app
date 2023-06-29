@@ -37,3 +37,6 @@ git remote rm origin
 
 git add .
 git commit -m "new hub"
+
+git branch -M main
+git push -u origin main
