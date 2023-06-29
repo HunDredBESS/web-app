@@ -8,7 +8,7 @@ import React, { useEffect, useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
+const metadata = {
   title: "Block Code",
   description: "platform to learn AI",
 };
