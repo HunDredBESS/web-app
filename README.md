@@ -29,3 +29,7 @@ npm run start
 
 pm2 start npm --name  "TestBlockCode" -- start
 
+https://github.com/nvm-sh/nvm
+https://www.npmjs.com/package/pm2
+
+git remote rm origin
