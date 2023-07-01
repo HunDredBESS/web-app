@@ -1,7 +1,12 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import Dog_img from "public/dog1.jpg";
+import Numpy_img from "public/numpy_logo.png";
+import Pandas_img from "public/pandas_logo.png";
+import Matplotlib_img from "public/matplotlib_logo.png";
+import Seaborn_img from "public/seaborn_logo.png";
+import Sklearn_img from "public/sk-learn_logo.png";
+
 
 type Props = {};
 
@@ -86,9 +91,15 @@ function detail_import({}: Props) {
               and selection.
             </div>
           </div>
+          <div className=" flex flex-row justify-center h-20">
+            <Image src={Numpy_img} width={90} height={80} alt="numpy Logo" />
+            <Image src={Pandas_img} width={150} height={80} alt="pandas Logo" />
+            <Image src={Matplotlib_img} width={180} height={80} alt="matplotlib Logo" />
+            <Image src={Seaborn_img} width={90} height={80} alt="seaborn Logo" />
+            <Image src={Sklearn_img} width={150} height={80} alt="sklearn Logo" />
 
-          <Image src={Dog_img} width={500} height={500} alt="AIAT Logo" />
 
+          </div>
         </details>
 
         {/* <details className="group border-s-4 border-green-500 bg-gray-50 p-6 dark:bg-gray-900 [&_summary::-webkit-details-marker]:hidden">

@@ -40,6 +40,16 @@ function detail_datacoll({}: Props) {
             Surveys and questionnaires are useful for collecting subjective or
             opinion-based information
           </p>
+          
+          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+            <div className="h-auto text-xl">matplotlib</div>
+            <div className="h-auto text-lg ">
+              A widely used library for data visualization in Python. It
+              provides a variety of plot types, including line plots, bar plots,
+              scatter plots, histograms, and more. matplotlib allows
+              customization of plots with labels, titles, colors, and styles.
+            </div>
+          </div>
 
           {/* <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
             <div className="h-auto text-xl ">numpy</div>
