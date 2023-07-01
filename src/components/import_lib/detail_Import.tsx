@@ -1,5 +1,7 @@
 "use client";
 import React from "react";
+import Image from "next/image";
+import Dog_img from "public/dog1.jpg";
 
 type Props = {};
 
@@ -84,6 +86,9 @@ function detail_import({}: Props) {
               and selection.
             </div>
           </div>
+
+          <Image src={Dog_img} width={500} height={500} alt="AIAT Logo" />
+
         </details>
 
         {/* <details className="group border-s-4 border-green-500 bg-gray-50 p-6 dark:bg-gray-900 [&_summary::-webkit-details-marker]:hidden">
