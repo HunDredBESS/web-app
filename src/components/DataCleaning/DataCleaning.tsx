@@ -5,7 +5,7 @@ import { MdDeleteOutline } from "react-icons/md";
 
 import BoxNew from "@/components/BoxComponent/BoxNew";
 // import CSVReader from "@/components/ReadCSV/CSVReader2";
-
+import Detaildataclean from "./detail_dataclean";
 import datalib from "../../components/DataCleaning/dataCleaning.json";
 
 type Props = {};
@@ -136,11 +136,13 @@ export default function DataCleaning({}: Props) {
 
   return (
     <>
-      <div className="grid md:grid-cols-7 gap-4 place-items-stretch mt-6 box-border h-fit w-auto p-2 items-start border-t-1 border-gray-500">
-        <div className="relative col-start-1 col-end-4 box-border h-auto min-w-[310px] w-full p-5 rounded-lg bg-gradient-to-r from-gray-800 to-gray-800 border-1 border-black">
+    <div className=" box-border h-fit w-auto mt-2 border-t-1 border-gray-500"></div>
+    <Detaildataclean/>
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8 place-items-stretch mt-2 h-fit w-auto p-2">
+        <div className="relative h-auto min-w-[310px] w-full p-5 rounded-lg bg-gradient-to-r from-gray-800 to-gray-800 border-1 border-black">
           <h1 className="text-xl text-white">Data Cleaning</h1>
 
-          <div className="grid lg:grid-cols-1 gap-2 grid-rows-none">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-1 grid-rows-none gap-2">
             {componentCodes.map((code) => (
               <div key={code.key}>{code}</div>
             ))}
@@ -154,9 +156,9 @@ export default function DataCleaning({}: Props) {
           </button>
         </div>
 
-        <div className="col-start-4 col-end-5 box-border h-fit p-5 rounded-lg text-center text-xl"></div>
+        {/* <div className="col-start-4 col-end-5 box-border h-fit p-5 rounded-lg text-center text-xl"></div> */}
 
-        <div className="col-start-5 col-end-8 box-border h-fit w-auto p-5 rounded-lg bg-gradient-to-r from-gray-800 to-gray-800 border-1 border-black">
+        <div className="h-fit w-auto p-5 rounded-lg bg-gradient-to-r from-gray-800 to-gray-800 border-1 border-black">
           <BoxNew code={resultDeleteLine} />
         </div>
       </div>

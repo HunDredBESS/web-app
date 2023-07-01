@@ -89,6 +89,15 @@
         "code2": "",
         "code3": ""
       }
+    },
+    {
+      "namelib": "sklearn",
+      "title": "",
+      "elements": {
+        "code1": "import sklearn ",
+        "code2": "",
+        "code3": ""
+      }
     }
   ]
 }

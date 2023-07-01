@@ -48,17 +48,24 @@ function ImportChild({id, key, childToParent, deletechild }: Props) {
     "pandas",
     "numpy",
     "matplotlib",
-    "tensorflow",
     "seaborn",
-    "pytorch",
-    "requests",
-    "sklearn.preprocessing"
+    "sklearn"
   ];
+  // const options: string[] = [
+  //   "pandas",
+  //   "numpy",
+  //   "matplotlib",
+  //   "tensorflow",
+  //   "seaborn",
+  //   "pytorch",
+  //   "requests",
+  //   "sklearn.preprocessing"
+  // ];
 
   return (
     <>
       <div className="flex flex-row md:flex-cols align-middle h-auto w-auto p-2 rounded-lg bg-white mt-1">
-        <div className="w-fit h-fit  p-0 m-0 flex-none">Import library</div>
+        <div className="w-auto h-fit  p-0 m-0 flex-none">Import library</div>
         <div className="w-fit h-full  p-0 m-0 flex-auto ">
           <select
             className="box-border h-auto w-auto p-1 rounded-md bg-white ml-1 items-center drop-shadow-lg text-md"
