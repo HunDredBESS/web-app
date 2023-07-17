@@ -33,15 +33,24 @@ function detail_datacoll({}: Props) {
           </summary>
 
           <p className="mt-4 leading-relaxed text-lg text-gray-200">
-            Data collection is a crucial step in the data science process. Data
+            เป็นขั้นตอนสำคัญใน data science
+            นักวิทยาศาสตร์ข้อมูลรวบรวมข้อมูลจากแหล่งต่าง ๆ เช่น การสำรวจ,
+            แบบสอบถาม, web scraping, APIs, ชุดข้อมูลสาธารณะ, เซ็นเซอร์,
+            ฐานข้อมูล, และการทดลอง
+            การสำรวจและแบบสอบถามใช้สำหรับข้อมูลความเห็นหรือข้อมูลเชิงบุคคล
+            การสกัดข้อมูลจากเว็บไซต์ใช้ในการเก็บข้อมูลจากเว็บไซต์ APIs
+            ใช้ในการเรียกใช้ข้อมูลจากแหล่งต่าง ๆ และยังมีการใช้ชุดข้อมูลสาธารณะ
+            เซ็นเซอร์ ฐานข้อมูลและการทดลองเพื่อสะสมข้อมูลและวิเคราะห์
+            การสะสมข้อมูลเป็นขั้นตอนสำคัญในการตรวจสอบและพัฒนาการแก้ไขปัญหาในวิทยาศาสตร์ข้อมูล
+            {/* Data collection is a crucial step in the data science process. Data
             scientists gather relevant data from various sources such as
             surveys, questionnaires, web scraping, APIs, publicly available
             datasets, sensor data, existing databases, and experimental data.
             Surveys and questionnaires are useful for collecting subjective or
-            opinion-based information
+            opinion-based information */}
           </p>
-          
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+
+          {/* <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
             <div className="h-auto text-xl">matplotlib</div>
             <div className="h-auto text-lg ">
               A widely used library for data visualization in Python. It
@@ -49,7 +58,7 @@ function detail_datacoll({}: Props) {
               scatter plots, histograms, and more. matplotlib allows
               customization of plots with labels, titles, colors, and styles.
             </div>
-          </div>
+          </div> */}
 
           {/* <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
             <div className="h-auto text-xl ">numpy</div>
