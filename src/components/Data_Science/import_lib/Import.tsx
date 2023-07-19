@@ -55,13 +55,13 @@ export default function DataCleaning({}: Props) {
       setFormData((prevData) => ({
         ...prevData,
         [id]: `# Used for data manipulation, analysis, and cleaning
-      \nimport import pandas as pd`,
+            \nimport import pandas as pd`,
       }));
     } else if (childdata.option === "numpy") {
       setFormData((prevData) => ({
         ...prevData,
         [id]: `# Used in various domains, including data analysis, statistics
-      \nimport numpy as np`,
+            \nimport numpy as np`,
       }));
     } else if (childdata.option === "matplotlib") {
       setFormData((prevData) => ({
@@ -76,8 +76,11 @@ export default function DataCleaning({}: Props) {
         \nimport seabon as sns`,
       }));
     } else if (childdata.option === "sklearn") {
-      setFormData((prevData) => ({ ...prevData, [id]: `# tools for data preprocessing, feature selection, model training, evaluation
-      \nimport sklearn ` }));
+      setFormData((prevData) => ({
+        ...prevData,
+        [id]: `# tools for data preprocessing, feature selection, model training, evaluation
+      \nimport sklearn `,
+      }));
     } else {
       try {
         setFormData((prevData) => ({ ...prevData, [id]: childdata.option1 }));
@@ -223,10 +226,7 @@ function DataCleaningChild({
         </div>
         <div className="w-fit h-fit p-0 m-0 flex-none">
           <button
-            // onClick={handleClearFile}
-            // onClick={() => deleteElement(index)}
             onClick={() => deletechild(id)}
-            // onClick={deletechild(key)}
             className="p-0 m-0 w-fit h-fit bg-transparent"
           >
             <MdDeleteOutline className="text-2xl" />
