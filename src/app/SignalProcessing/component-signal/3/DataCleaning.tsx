@@ -7,7 +7,7 @@ import BoxNew from "../BoxComponent/BoxNew";
 import Detaildataclean from "./detail_dataclean";
 
 import Image from "next/image";
-import Numpy_img from "public/numpy_logo.png";
+import Numpy_img from "public/datascience/numpy_logo.png";
 
 type Props = {};
 

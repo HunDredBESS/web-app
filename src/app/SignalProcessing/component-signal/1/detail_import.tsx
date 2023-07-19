@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import Numpy_img from "public/numpy_logo.png";
-import Pandas_img from "public/pandas_logo.png";
-import Matplotlib_img from "public/matplotlib_logo.png";
-import Seaborn_img from "public/seaborn_logo.png";
-import Sklearn_img from "public/sk-learn_logo.png";
+import Numpy_img from "public/datascience/numpy_logo.png";
+import Pandas_img from "public/datascience/pandas_logo.png";
+import Matplotlib_img from "public/datascience/matplotlib_logo.png";
+import Seaborn_img from "public/datascience/seaborn_logo.png";
+import Sklearn_img from "public/datascience/sk-learn_logo.png";
 
 type Props = {};
 
@@ -20,7 +20,7 @@ function detail_import({}: Props) {
           <summary className="flex cursor-pointer items-center justify-between gap-1.5">
             <h2 className="text-2xl font-medium  text-white">
               {/* basic libraries for data science in Python */}
-              libraries พื้นฐานในงาน data science
+              Import library
             </h2>
 
             <span className="shrink-0 rounded-full  p-1.5  bg-gray-800 text-white sm:p-3">
