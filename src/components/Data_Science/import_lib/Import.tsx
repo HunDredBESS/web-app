@@ -52,21 +52,32 @@ export default function DataCleaning({}: Props) {
     const inputValue4 = childdata.input4 || "";
 
     if (childdata.option === "pandas") {
-      setFormData((prevData) => ({ ...prevData, [id]: `import pandas as pd` }));
+      setFormData((prevData) => ({
+        ...prevData,
+        [id]: `# Used for data manipulation, analysis, and cleaning
+      \nimport import pandas as pd`,
+      }));
     } else if (childdata.option === "numpy") {
-      setFormData((prevData) => ({ ...prevData, [id]: `import numpy as np` }));
+      setFormData((prevData) => ({
+        ...prevData,
+        [id]: `# Used in various domains, including data analysis, statistics
+      \nimport numpy as np`,
+      }));
     } else if (childdata.option === "matplotlib") {
       setFormData((prevData) => ({
         ...prevData,
-        [id]: `import matplotlib.pyplot as plt`,
+        [id]: `# Used for creating high-quality static, interactive, and animated visualizations.
+        \nimport matplotlib.pyplot as plt`,
       }));
     } else if (childdata.option === "seaborn") {
       setFormData((prevData) => ({
         ...prevData,
-        [id]: `import seabon as sns`,
+        [id]: `# Used for data visualization
+        \nimport seabon as sns`,
       }));
     } else if (childdata.option === "sklearn") {
-      setFormData((prevData) => ({ ...prevData, [id]: `import sklearn ` }));
+      setFormData((prevData) => ({ ...prevData, [id]: `# tools for data preprocessing, feature selection, model training, evaluation
+      \nimport sklearn ` }));
     } else {
       try {
         setFormData((prevData) => ({ ...prevData, [id]: childdata.option1 }));
