@@ -1,0 +1,30 @@
+{
+  "importlib": [
+    {
+      "namelib": "",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "None",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "CSV",
+      "title": "",
+      "elements": {
+        "code1": "submission_df = test_df.copy()",
+        "code2": "submission_df.to_csv('nameofsubmission.csv', index=False)"
+      }
+    }
+  ]
+}

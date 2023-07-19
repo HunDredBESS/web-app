@@ -1,0 +1,46 @@
+{
+  "importlib": [
+    {
+      "namelib": "",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "None",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "Imagegenwork",
+      "title": "",
+      "elements": {
+        "code1": "example_df = train_df.sample(n=1).reset_index(drop=True)",
+        "code2": "example_generator = train_datagen.flow_from_dataframe(",
+        "code3": "    example_df,",
+        "code4": "    'D:/dogcatpanda/dogcatpanda/animals/datasets/train/',",
+        "code5": "    x_col='namefile',",
+        "code6": "    y_col='category',",
+        "code7": "    target_size=IMAGE_SIZE,",
+        "code8": "    class_mode='categorical'",
+        "code9": ")",
+        "code10": "plt.figure(figsize=(12, 12))",
+        "code11": "for i in range(0, 15):",
+        "code12": "    plt.subplot(5, 3, i+1)",
+        "code13": "    for X_batch, Y_batch in example_generator:",
+        "code14": "        image = X_batch[0]",
+        "code15": "        plt.imshow(image)",
+        "code16": "        break",
+        "code17": "plt.tight_layout()",
+        "code18": "plt.show()"
+      }
+    }
+  ]
+}

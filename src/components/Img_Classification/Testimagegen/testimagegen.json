@@ -1,0 +1,39 @@
+{
+  "importlib": [
+    {
+      "namelib": "",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "None",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "Testimagegen",
+      "title": "",
+      "elements": {
+        "code1": "test_filenames = os.listdir('D:/dogcatpanda/dogcatpanda/animals/datasets/test/')",
+        "code2": "test_df = pd.DataFrame({'namefile': test_filenames})",
+        "code3": "nb_samples = test_df.shape[0]",
+        "code4": "test_gen = ImageDataGenerator(rescale=1./255)",
+        "code5": "test_generator = test_gen.flow_from_dataframe(",
+        "code6": "    test_df,",
+        "code7": "    'D:/dogcatpanda/dogcatpanda/animals/datasets/test/',",
+        "code8": "    x_col='namefile',",
+        "code9": "    class_mode=None,target_size=IMAGE_SIZE,batch_size=batch_size,shuffle=False",
+        "code10": ")"
+
+      }
+    }
+  ]
+}

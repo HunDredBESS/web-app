@@ -1,0 +1,30 @@
+{
+  "importlib": [
+    {
+      "namelib": "",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "None",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "Predict",
+      "title": "",
+      "elements": {
+        "code1": "predict = model.predict_generator(test_generator, steps=np.ceil(nb_samples/batch_size))"
+
+      }
+    }
+  ]
+}

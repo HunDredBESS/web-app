@@ -1,0 +1,34 @@
+{
+  "importlib": [
+    {
+      "namelib": "",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "None",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "Random",
+      "title": "",
+      "elements": {
+        "code1": "import random",
+        "code2": "from tensorflow.keras.preprocessing.image import load_img",
+        "code3": "import matplotlib.pyplot as plt",
+        "code4": "sample = random.choice(filenames)",
+        "code5": "image = load_img('D:/dogcatpanda/dogcatpanda/animals/datasets/train/'+sample)",
+        "code6": "plt.imshow(image)"
+      }
+    }
+  ]
+}

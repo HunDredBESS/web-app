@@ -1,0 +1,39 @@
+{
+  "importlib": [
+    {
+      "namelib": "",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "None",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "Valimagegen",
+      "title": "",
+      "elements": {
+        "code1": "validation_datagen = ImageDataGenerator(rescale=1./255)",
+        "code2": "validation_generator = validation_datagen.flow_from_dataframe(",
+        "code3": "    validate_df,",
+        "code4": "    'D:/dogcatpanda/dogcatpanda/animals/datasets/train/',",
+        "code5": "    x_col='namefile',",
+        "code6": "    y_col='category',",
+        "code7": "    target_size=IMAGE_SIZE,",
+        "code8": "    class_mode='categorical',",
+        "code9": "    batch_size=batch_size",
+        "code10": ")"
+
+      }
+    }
+  ]
+}

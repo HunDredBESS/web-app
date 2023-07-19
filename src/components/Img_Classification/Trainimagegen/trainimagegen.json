@@ -1,0 +1,47 @@
+{
+  "importlib": [
+    {
+      "namelib": "",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "None",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "Trainimagegen",
+      "title": "",
+      "elements": {
+        "code1": "from keras.preprocessing.image import ImageDataGenerator",
+        "code2": "train_datagen = ImageDataGenerator(",
+        "code3": "    rotation_range=15,",
+        "code4": "    rescale=1./255,",
+        "code5": "    shear_range=0.1,",
+        "code6": "    zoom_range=0.2,",
+        "code7": "    horizontal_flip=True,",
+        "code8": "    width_shift_range=0.1,",
+        "code9": "    height_shift_range=0.1",
+        "code10": ")",
+        "code11": "train_generator = train_datagen.flow_from_dataframe(",
+        "code12": "   train_df,",
+        "code13": "   'D:/dogcatpanda/dogcatpanda/animals/datasets/train/',",
+        "code14": "   x_col='namefile',",
+        "code15": "   y_col='category',",
+        "code16": "   target_size=IMAGE_SIZE,",
+        "code17": "   class_mode='categorical',",
+        "code18": "   batch_size=batch_size",
+        "code19": ")"
+      }
+    }
+  ]
+}

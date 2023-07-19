@@ -1,0 +1,33 @@
+{
+  "importlib": [
+    {
+      "namelib": "",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "None",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "Split",
+      "title": "",
+      "elements": {
+        "code1": "from sklearn.model_selection import train_test_split",
+        "code2": "train_df, validate_df = train_test_split(df, test_size=0.20, random_state=42)",
+        "code3": "train_df = train_df.reset_index(drop=True)",
+        "code4": "validate_df = validate_df.reset_index(drop=True)"
+        
+      }
+    }
+  ]
+}

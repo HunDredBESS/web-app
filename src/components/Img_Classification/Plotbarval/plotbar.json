@@ -1,0 +1,32 @@
+{
+  "importlib": [
+    {
+      "namelib": "",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "None",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "Plotbar",
+      "title": "",
+      "elements": {
+        "code1": "validate_df['category'].value_counts().plot.bar()",
+        "code2": "total_train = train_df.shape[0]",
+        "code3": "total_validate = validate_df.shape[0]",
+        "code4": "batch_size=15"
+      }
+    }
+  ]
+}

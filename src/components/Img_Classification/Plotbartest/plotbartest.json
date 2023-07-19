@@ -1,0 +1,32 @@
+{
+  "importlib": [
+    {
+      "namelib": "",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "None",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "Plotbartest",
+      "title": "",
+      "elements": {
+        "code1": "test_df['category'] = np.argmax(predict, axis=-1)",
+        "code2": "label_map = dict((v,k) for k,v in train_generator.class_indices.items())",
+        "code3": "test_df['category'] = test_df['category'].replace(label_map)",
+        "code4": "test_df['category'].value_counts().plot.bar()"
+      }
+    }
+  ]
+}

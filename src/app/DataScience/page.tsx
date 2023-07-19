@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import ImportBox from "@/components/import_lib/ImportBox";
-import DataCollection from "@/components/DataCollection/Datacollection";
-import DataCleaning from "@/components/DataCleaning/DataCleaning";
+import ImportBox from "@/components/Data_Science/import_lib/ImportBox";
+import DataCollection from "@/components/Data_Science/DataCollection/Datacollection";
+import DataCleaning from "@/components/Data_Science/DataCleaning/DataCleaning";
 import Image from "next/image";
 
 import Plot_img from "public/datascience/plot101.png";

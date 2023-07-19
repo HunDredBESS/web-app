@@ -1,0 +1,32 @@
+{
+  "importlib": [
+    {
+      "namelib": "",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "None",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "Callbacks",
+      "title": "",
+      "elements": {
+        "code1": "from keras.callbacks import EarlyStopping, ReduceLROnPlateau",
+        "code2": "earlystop = EarlyStopping(patience=10)",
+        "code3": "learning_rate_reduction = ReduceLROnPlateau(monitor='val_accuracy',patience=2,verbose=1,factor=0.5,min_lr=0.00001)",
+        "code4": "callbacks = [earlystop, learning_rate_reduction]"
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "importlib": [
+    {
+      "namelib": "",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "None",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "Trainmodel",
+      "title": "",
+      "elements": {
+        "code1": "epochs=50",
+        "code2": "history = model.fit_generator(",
+        "code3": "    train_generator,",
+        "code4": "    epochs=epochs,",
+        "code5": "    validation_data=validation_generator,",
+        "code6": "    validation_steps=total_validate//batch_size,",
+        "code7": "    steps_per_epoch=total_train//batch_size,",
+        "code8": "    callbacks=callbacks",
+        "code9": ")",
+        "code10": "#model.save('catdogpanda_model.h5')"
+      }
+    }
+  ]
+}

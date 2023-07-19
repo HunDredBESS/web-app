@@ -1,0 +1,40 @@
+{
+  "importlib": [
+    {
+      "namelib": "",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "None",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "Resultpredict",
+      "title": "",
+      "elements": {
+        "code1": "sample_test = test_df.head(18)",
+        "code2": "sample_test.head()",
+        "code3": "plt.figure(figsize=(12, 24))",
+        "code4": "for index, row in sample_test.iterrows():",
+        "code5": "    filename = row['namefile']",
+        "code6": "    category = row['category']",
+        "code7": "    img = load_img'D:/dogcatpanda/dogcatpanda/animals/datasets/test/'+filename, target_size=IMAGE_SIZE)",
+        "code8": "    plt.subplot(6, 3, index+1)",
+        "code9": "    plt.imshow(img)",
+        "code10": "   plt.xlabel(filename + '(' + '{}'.format(category) + ')' )",
+        "code11": "plt.tight_layout()",
+        "code12": "plt.show()"
+      }
+    }
+  ]
+}

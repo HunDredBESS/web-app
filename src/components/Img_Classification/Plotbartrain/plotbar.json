@@ -1,0 +1,29 @@
+{
+  "importlib": [
+    {
+      "namelib": "",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "None",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "Plotbar",
+      "title": "",
+      "elements": {
+        "code1": "train_df['category'].value_counts().plot.bar()"
+      }
+    }
+  ]
+}

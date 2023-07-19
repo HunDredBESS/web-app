@@ -1,0 +1,54 @@
+{
+  "importlib": [
+    {
+      "namelib": "",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "None",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "Model",
+      "title": "",
+      "elements": {
+        "code1": "from keras.models import Sequential",
+        "code2": "from keras.layers import Dropout, Dense, Activation, BatchNormalization, GlobalAveragePooling2D",
+        "code3": "from keras.applications.densenet import DenseNet201",
+        "code4": "import tensorflow as tf",
+        "code5": "number_of_class = 3",
+        "code6": "IMAGE_WIDTH=224",
+        "code7": "IMAGE_HEIGHT=224",
+        "code8": "IMAGE_SIZE=(IMAGE_WIDTH, IMAGE_HEIGHT)",
+        "code9": "IMAGE_CHANNELS=3",
+        "code10": "densenet201_base_model = DenseNet201(input_shape=(IMAGE_WIDTH, IMAGE_HEIGHT, 3),include_top=False,weights='imagenet')",
+        "code11": "model =  tf.keras.Sequential([",
+        "code12": "         densenet201_base_model,",
+        "code13": "         GlobalAveragePooling2D(),",
+        "code14": "         Dense(64, activation='relu'),",
+        "code15": "         BatchNormalization(),",
+        "code16": "         Dropout(0.5),",
+        "code17": "         Dense(32, activation='relu'),",
+        "code18": "         BatchNormalization(),",
+        "code19": "         Dropout(0.4),",
+        "code20": "         Dense(number_of_class,activation='softmax')",
+        "code21": " ])",
+        "code22": "opt = tf.keras.optimizers.Adam(learning_rate=0.0001)",
+        "code23": "METRICS = ['acc',tf.keras.metrics.Precision(name='precision'),tf.keras.metrics.Recall(name='recall')]",
+        "code24": "model.compile(optimizer=opt,loss='categorical_crossentropy',metrics=METRICS)",
+        "code25": "model.summary()"
+
+      }
+    }
+  ]
+}

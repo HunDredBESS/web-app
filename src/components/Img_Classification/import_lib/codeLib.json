@@ -1,0 +1,40 @@
+{
+  "importlib": [
+    {
+      "namelib": "",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "None",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "Label_dataset",
+      "title": "",
+      "elements": {
+        "code1": "import os",
+        "code2": "import pandas as pd",
+        "code3": "filenames = os.listdir('D:/dogcatpanda/dogcatpanda/animals/datasets/train')",
+        "code4": "for filename in filenames:",
+        "code5": "    category = filename.split('.')[0]",
+        "code6": "    if category == 'cat':",
+        "code7": "      categories.append('cat')",
+        "code8": "    elif category == 'dog':",
+        "code9": "      categories.append('dog')",
+        "code10": "   else:",
+        "code11": "      categories.append('panda')",
+        "code12": "df = pd.DataFrame({'namefile': filenames,'category': categories})"
+      }
+    }
+  ]
+}
