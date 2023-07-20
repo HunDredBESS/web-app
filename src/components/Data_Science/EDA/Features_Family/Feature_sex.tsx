@@ -3,8 +3,8 @@ import React, { useEffect, useState, useRef, useMemo } from "react";
 import { CiCirclePlus } from "react-icons/ci";
 import { MdDeleteOutline } from "react-icons/md";
 
-import BoxNew from "../BoxComponent/BoxNew";
-import Detaildataclean from "./detail_dataclean";
+import BoxNew from "../../BoxComponent/BoxNew";
+import Detaildataclean from "./detail_sex";
 
 import Image from "next/image";
 import Numpy_img from "public/datascience/numpy_logo.png";

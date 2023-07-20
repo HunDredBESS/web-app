@@ -101,8 +101,8 @@ function detail_import({}: Props) {
               ไลบรารีการแสดงผลข้อมูลที่พัฒนาขึ้นบน matplotlib โดย Seaborn
               ให้ส่วนต่อส่วนระดับสูงสำหรับสร้างกราฟทางสถิติที่น่าสนใจและสวยงาม
               มันมีฟังก์ชันที่ใช้สำหรับการแสดงผลความสัมพันธ์ระหว่างตัวแปร
-              การกระจายข้อมูล(distributions) และข้อมูลทางหมวดหมู่(categorical data) 
-              
+              การกระจายข้อมูล(distributions) และข้อมูลทางหมวดหมู่(categorical
+              data)
               {/* A data visualization library based on matplotlib. Seaborn provides
               a high-level interface for creating attractive and informative
               statistical graphics. It offers functions for visualizing
@@ -113,12 +113,10 @@ function detail_import({}: Props) {
           <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed text-gray-200">
             <div className="h-auto text-xl">scikit-learn</div>
             <div className="h-auto text-lg ">
-              scikit-learn
-              เป็นไลบรารีที่ครอบคลุมและทันสมัยสำหรับ machine learning ใน python
-              มันให้เครื่องมือที่หลากหลายสำหรับการเรียนรู้แบบ supervised และ unsupervised learning
-              เช่น การสร้างโมเดลการทำนาย การจัดกลุ่ม การแบ่งกลุ่ม
-              และการลดมิติข้อมูล(pca) 
-              
+              scikit-learn เป็นไลบรารีที่ครอบคลุมและทันสมัยสำหรับ machine
+              learning ใน python มันให้เครื่องมือที่หลากหลายสำหรับการเรียนรู้แบบ
+              supervised และ unsupervised learning เช่น การสร้างโมเดลการทำนาย
+              การจัดกลุ่ม การแบ่งกลุ่ม และการลดมิติข้อมูล(pca)
               {/* A comprehensive library for machine learning in Python. It offers
               a variety of supervised and unsupervised learning algorithms, such
               as regression, classification, clustering, and dimensionality
@@ -149,36 +147,6 @@ function detail_import({}: Props) {
             />
           </div>
         </details>
-
-        {/* <details className="group border-s-4 border-green-500 bg-gray-50 p-6 dark:bg-gray-900 [&_summary::-webkit-details-marker]:hidden">
-          <summary className="flex cursor-pointer items-center justify-between gap-1.5">
-            <h2 className="text-lg font-medium text-gray-900 dark:text-white">
-              Lorem ipsum dolor sit amet consectetur adipisicing?
-            </h2>
-
-            <span className="shrink-0 rounded-full bg-white p-1.5 text-gray-900 dark:bg-gray-800 dark:text-white sm:p-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-45"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </span>
-          </summary>
-
-          <p className="mt-4 leading-relaxed text-gray-700 dark:text-gray-200">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic
-            veritatis molestias culpa in, recusandae laboriosam neque aliquid
-            libero nesciunt voluptate dicta quo officiis explicabo consequuntur
-            distinctio corporis earum similique!
-          </p>
-        </details> */}
       </div>
     </>
   );

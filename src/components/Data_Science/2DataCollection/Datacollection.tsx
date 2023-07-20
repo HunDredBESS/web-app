@@ -4,9 +4,12 @@ import { CiCirclePlus } from "react-icons/ci";
 import { MdDeleteOutline } from "react-icons/md";
 
 import BoxNew from "../BoxComponent/BoxNew";
-// import CSVReader from "@/components/ReadCSV/CSVReader2";
 import Detaildatacoll from "./detail_datacoll";
 import datalib from './dataCollection.json'
+
+import Image from "next/image";
+import Dataset_img from "public/datascience/titanic-train01.png";
+
 
 type Props = {};
 
@@ -50,7 +53,8 @@ export default function DataCollection({}: Props) {
     if (childdata.name === "read csv") {
         if (childdata.input === ""){
             setFormData((prevData) => ({ ...prevData, [id]: `${childdata.elements.comment1}
-                                                            \n${childdata.elements.code1} input path ${childdata.elements.code2}` }));
+                                                            \n${childdata.elements.code1} train.csv ${childdata.elements.code2}
+                                                            \ntrain_data.head()` }));
         } else {
             setFormData((prevData) => ({ ...prevData, [id]: `${childdata.elements.comment1}
                                                             \n${childdata.elements.code1}${childdata.input}${childdata.elements.code2}` }));

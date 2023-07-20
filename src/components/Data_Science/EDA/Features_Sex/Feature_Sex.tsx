@@ -3,11 +3,11 @@ import React, { useEffect, useState, useRef, useMemo } from "react";
 import { CiCirclePlus } from "react-icons/ci";
 import { MdDeleteOutline } from "react-icons/md";
 
-import BoxNew from "../BoxComponent/BoxNew";
-import Detaildataclean from "./detail_import";
+import BoxNew from "../../BoxComponent/BoxNew";
+import Detaildataclean from "./detail_Sex";
 
-import Image from "next/image";
-import Numpy_img from "public/signal/numpy_logo.png";
+// import Image from "next/image";
+// import Numpy_img from "public/signal/numpy_logo.png";
 
 type Props = {};
 
@@ -51,36 +51,32 @@ export default function DataCleaning({}: Props) {
     const inputValue3 = childdata.input3 || "";
     const inputValue4 = childdata.input4 || "";
 
-    if (childdata.option === "pandas") {
+    if (childdata.option === "visualization plot") {
       setFormData((prevData) => ({
         ...prevData,
-        [id]: `# Used for data manipulation, analysis, and cleaning
-            \nimport import pandas as pd`,
+        [id]: `# visualization sex and survived plot
+        \nsurvived = train_data[train_data["Survived"]==1]["Sex"].value_counts()
+        \ndead = train_data[train_data["Survived"]==0]["Sex"].value_counts()
+        \ndf_sex = pd.DataFrame([survived,dead])
+        \ndf_sex.index = ["Survived","Dead"]
+        \ndf_sex.plot(kind="bar",stacked = True, figsize = (8,4))`,
       }));
-    } else if (childdata.option === "numpy") {
+    } else if (childdata.option === "visualization table") {
       setFormData((prevData) => ({
         ...prevData,
-        [id]: `# Used in various domains, including data analysis, statistics
-            \nimport numpy as np`,
+        [id]: `## visualization table
+            \ntrain_data[["Sex", "Survived"]].groupby(['Sex'], \\
+            \n    as_index=False).mean().sort_values(by='Survived', ascending=False)`,
       }));
-    } else if (childdata.option === "matplotlib") {
+    
+    }else if (childdata.option === "convert feature") {
       setFormData((prevData) => ({
         ...prevData,
-        [id]: `# Used for creating high-quality static, interactive, and animated visualizations.
-        \nimport matplotlib.pyplot as plt`,
+        [id]: `## convert feature from male, female to 0,1
+                \ntrain_data['Sex'] = train_data['Sex'].map( {'female': 1, 'male': 0} ).astype(int)
+                \ntrain_data.head()`,
       }));
-    } else if (childdata.option === "seaborn") {
-      setFormData((prevData) => ({
-        ...prevData,
-        [id]: `# Used for data visualization
-        \nimport seabon as sns`,
-      }));
-    } else if (childdata.option === "sklearn") {
-      setFormData((prevData) => ({
-        ...prevData,
-        [id]: `# tools for data preprocessing, feature selection, model training, evaluation
-      \nimport sklearn `,
-      }));
+    
     } else {
       try {
         setFormData((prevData) => ({ ...prevData, [id]: childdata.option1 }));
@@ -124,7 +120,7 @@ export default function DataCleaning({}: Props) {
       <Detaildataclean />
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8 place-items-stretch mt-2 h-fit w-auto p-2">
         <div className="relative h-auto min-w-[310px] w-full p-5 rounded-lg bg-gradient-to-r from-gray-800 to-gray-800 border-1 border-black">
-          <h1 className="text-xl text-white">1 import libraries</h1>
+          <h1 className="text-xl text-white">Feature Sex</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-1 grid-rows-none gap-2">
             {componentCodes.map((code) => (
               <div key={code.key}>{code}</div>
@@ -140,9 +136,9 @@ export default function DataCleaning({}: Props) {
 
         <div className="h-fit w-auto p-5 rounded-lg bg-gradient-to-r from-gray-800 to-gray-800 border-1 border-black">
           <BoxNew code={resultDeleteLine} />
-          <div className=" flex flex-row justify-center">
+          {/* <div className=" flex flex-row justify-center">
             <Image src={Numpy_img} width={90} height={80} alt="numpy Logo" />
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="block bg-red-500 w-full h-auto">
@@ -199,18 +195,17 @@ function DataCleaningChild({
   }, [option, childToParent, id]);
 
   const options: string[] = [
-    "pandas",
-    "numpy",
-    "matplotlib",
-    "seaborn",
-    "sklearn",
+    "visualization plot",
+    "visualization table",
+    "convert feature",
+   
   ];
 
   return (
     <>
       <div className="flex flex-row md:flex-cols align-middle h-auto w-auto p-2 rounded-lg bg-white mt-1">
-        <div className="w-auto h-fit  p-0 m-0 flex-none">Import library</div>
-        <div className="w-fit h-full  p-0 m-0 flex-auto ">
+        <div className="w-auto h-fit  p-0 ml-5 flex-none">Feature</div>
+        <div className="w-fit h-full  p-0 ml-5 flex-auto ">
           <select
             className="box-border h-auto w-auto p-1 rounded-md bg-white ml-1 items-center drop-shadow-lg text-md"
             onChange={childToBox}

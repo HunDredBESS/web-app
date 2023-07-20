@@ -22,7 +22,7 @@
       "name": "read csv",
       "title": "read .csv with pandas",
       "elements": {
-        "code1": "data = pd.read_csv('",
+        "code1": "train_data = pd.read_csv('",
         "code2": "')",
         "code3": "",
         "comment1": "# Load data from a CSV file",

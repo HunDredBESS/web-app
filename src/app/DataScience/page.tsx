@@ -1,8 +1,13 @@
 "use client";
 import React from "react";
-import ImportBox from "@/components/Data_Science/import_lib/Import";
-import DataCollection from "@/components/Data_Science/DataCollection/Datacollection";
-import DataCleaning from "@/components/Data_Science/DataCleaning/DataCleaning";
+import ImportBox from "@/components/Data_Science/1import_lib/Import";
+import DataCollection from "@/components/Data_Science/2DataCollection/Datacollection";
+import DataCleaning from "@/components/Data_Science/3DataCleaning/DataCleaning";
+import Drop_cols from "@/components/Data_Science/4Drop_data/Drop-data";
+import Feature_Sex from "@/components/Data_Science/EDA/Features_Sex/Feature_Sex";
+import Feature_Age from "@/components/Data_Science/EDA/Features_Age/Feature_Age";
+
+
 import Image from "next/image";
 
 import Plot_img from "public/datascience/plot101.png";
@@ -13,10 +18,10 @@ type Props = {};
 
 export default function DataScience({}: Props) {
   return (
-    <div className="">
+    <div className="mb-[100px]">
       {/* <nav className='h-10 text-2xl text-white fixed w-full z-10 shadow-xl bg-black'>Data Science</nav> */}
       <div className="">
-        <div className="box-border h-fit w-auto p-2 bg-slate-800 border-solid">
+        <div className="box-border h-fit w-auto p-2 bg-slate-800 border-solid mb-10 pb-10">
           {/* <div className="box-border h-fit w-auto p-2 bg-gradient-to-r from-slate-800 via-slate-900 to-slate-800 border-solid"> */}
           <div className="text-4xl items-center box-border text-white pt-6 px-6">
             Data Science
@@ -91,6 +96,9 @@ export default function DataScience({}: Props) {
           <ImportBox />
           <DataCollection />
           <DataCleaning />
+          <Drop_cols/>
+          <Feature_Sex/>
+          <Feature_Age/>
         </div>
       </div>
     </div>
