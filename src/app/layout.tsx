@@ -70,14 +70,14 @@ export default function RootLayout({
                     About
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
                     href="/Test-page"
                     className="block py-2 pl-3 pr-4  rounded md:border-0  md:p-0 text-white md:hover:text-blue-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent"
                   >
                     Test-feature
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
