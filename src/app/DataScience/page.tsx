@@ -1,17 +1,24 @@
 "use client";
 import React from "react";
+
 import ImportBox from "@/components/Data_Science/1import_lib/Import";
 import DataCollection from "@/components/Data_Science/2DataCollection/Datacollection";
 import DataCleaning from "@/components/Data_Science/3DataCleaning/DataCleaning";
 import Drop_cols from "@/components/Data_Science/4Drop_data/Drop-data";
-import Feature_Sex from "@/components/Data_Science/EDA/Features_Sex/Feature_Sex";
-import Feature_Age from "@/components/Data_Science/EDA/Features_Age/Feature_Age";
+import Feature_Sex from "@/components/Data_Science/5EDA/Features_Sex/Feature_Sex";
+import Feature_Age from "@/components/Data_Science/5EDA/Features_Age/Feature_Age";
+import Feature_Family from "@/components/Data_Science/5EDA/Features_Family/Feature_Family";
+import Feature_Alone from "@/components/Data_Science/5EDA/Features_Alone/Feature_Alone";
+import Feature_Embarked from "@/components/Data_Science/5EDA/Features_Embarked/Feature_Embarked";
+import Feature_Fare from "@/components/Data_Science/5EDA/Features_Fare/Feature_Fare";
+import Feature_Pclass from "@/components/Data_Science/5EDA/Features_Pclass/Feature_Pclass";
+
 
 
 import Image from "next/image";
 
-import Plot_img from "public/datascience/plot101.png";
-import Corr_img from "public/datascience/corr101.png";
+import Plot_img from "public/datascience/main_plot.png";
+import Corr_img from "public/datascience/corr_titanic.png";
 import Table_img from "public/datascience/table.png";
 
 type Props = {};
@@ -65,26 +72,25 @@ export default function DataScience({}: Props) {
               <div className=" flex flex-row  justify-center h-50">
                 <Image
                   src={Plot_img}
-                  width={400}
+                  width={300}
                   height={70}
                   alt="plot 101"
                   className="m-1"
                 />
-                                <Image
+                <Image
                   src={Corr_img}
-                  width={400}
+                  width={300}
                   height={70}
                   alt="plot corr"
                   className="m-1"
-
                 />
-                                <Image
+                {/* <Image
                   src={Table_img}
                   width={400}
                   height={70}
                   alt="table"
                   className="m-1"
-                />
+                /> */}
               </div>
             </div>
           </div>
@@ -96,9 +102,17 @@ export default function DataScience({}: Props) {
           <ImportBox />
           <DataCollection />
           <DataCleaning />
-          <Drop_cols/>
-          <Feature_Sex/>
-          <Feature_Age/>
+          <Drop_cols />
+
+          <Feature_Sex />
+          <Feature_Age />
+          <Feature_Family/>
+          <Feature_Alone/>
+          <Feature_Embarked/>
+          <Feature_Fare/>
+          <Feature_Pclass/>
+
+
         </div>
       </div>
     </div>
