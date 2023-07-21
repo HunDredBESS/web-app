@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 
-import Alone_img from "public/datascience/feature_Alone01.png";
+import Alone_img from "public/datascience/feature_alone01.png";
 // import Parch_img from "public/datascience/ParchVsSurvived01.png";
 
 // import Drop_img from "public/datascience/drop-cols10.png";
