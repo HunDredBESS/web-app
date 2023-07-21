@@ -5,6 +5,7 @@ import ImportBox from "@/components/Data_Science/1import_lib/Import";
 import DataCollection from "@/components/Data_Science/2DataCollection/Datacollection";
 import DataCleaning from "@/components/Data_Science/3DataCleaning/DataCleaning";
 import Drop_cols from "@/components/Data_Science/4Drop_data/Drop-data";
+
 import Feature_Sex from "@/components/Data_Science/5EDA/Features_Sex/Feature_Sex";
 import Feature_Age from "@/components/Data_Science/5EDA/Features_Age/Feature_Age";
 import Feature_Family from "@/components/Data_Science/5EDA/Features_Family/Feature_Family";
@@ -13,7 +14,14 @@ import Feature_Embarked from "@/components/Data_Science/5EDA/Features_Embarked/F
 import Feature_Fare from "@/components/Data_Science/5EDA/Features_Fare/Feature_Fare";
 import Feature_Pclass from "@/components/Data_Science/5EDA/Features_Pclass/Feature_Pclass";
 
+import Train_Split from "@/components/Data_Science/6Train_split/Feature_Split";
 
+import Train_KNeighbors from "@/components/Data_Science/7Train_KNeighbors/Train_KNeighbors";
+import Train_DT from "@/components/Data_Science/8Train_DT/Train_DT";
+
+import Clean_test from "@/components/Data_Science/9Pe_testdata/Clean_datatest";
+import Prediction from "@/components/Data_Science/10prediction/Prediction";
+import SaveCSV from "@/components/Data_Science/11SaveCSV/Save_csv";
 
 import Image from "next/image";
 
@@ -106,13 +114,20 @@ export default function DataScience({}: Props) {
 
           <Feature_Sex />
           <Feature_Age />
-          <Feature_Family/>
-          <Feature_Alone/>
-          <Feature_Embarked/>
-          <Feature_Fare/>
-          <Feature_Pclass/>
+          <Feature_Family />
+          <Feature_Alone />
+          <Feature_Embarked />
+          <Feature_Fare />
+          <Feature_Pclass />
 
+          <Train_Split />
 
+          <Train_KNeighbors />
+          <Train_DT />
+
+          <Clean_test />
+          <Prediction />
+          <SaveCSV />
         </div>
       </div>
     </div>
