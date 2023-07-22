@@ -1,0 +1,136 @@
+{
+  "importlib": [
+    {
+      "namelib": "",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": "",
+        "code4": "",
+        "code5": "",
+        "code6": "",
+        "code7": ""
+      }
+    },
+    {
+      "namelib": "None",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": "",
+        "code4": "",
+        "code5": "",
+        "code6": "",
+        "code7": ""
+      }
+    },
+    {
+      "namelib": "pandas",
+      "title": "",
+      "elements": {
+        "code1": "import pandas as pd",
+        "code2": "",
+        "code3": "",
+        "code4": "",
+        "code5": "",
+        "code6": "",
+        "code7": ""
+      }
+    },
+    {
+      "namelib": "numpy",
+      "title": "",
+      "elements": {
+        "code1": "import numpy as np",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "seaborn",
+      "title": "",
+      "elements": {
+        "code1": "import seabon as sns",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "tensorflow",
+      "title": "",
+      "elements": {
+        "code1": "import tensorflow as tf",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "matplotlib",
+      "title": "",
+      "elements": {
+        "code1": "import matplotlib.pyplot as plt",
+        "code2": "",
+        "code3": "",
+        "code4": "",
+        "code5": "",
+        "code6": "",
+        "code7": ""
+      }
+    },
+    {
+      "namelib": "pytorch",
+      "title": "",
+      "elements": {
+        "code1": "import pytorch",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "requests",
+      "title": "",
+      "elements": {
+        "code1": "import requests",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "sklearn.preprocessing",
+      "title": "",
+      "elements": {
+        "code1": "from sklearn.preprocessing import MinMaxScaler, StandardScaler",
+        "code2": "",
+        "code3": ""
+      }
+    },
+    {
+      "namelib": "sklearn",
+      "title": "",
+      "elements": {
+        "code1": "import sklearn ",
+        "code2": "",
+        "code3": "",
+        "code4": "",
+        "code5": "",
+        "code6": "",
+        "code7": ""
+      }
+    },
+    {
+      "namelib": "All",
+      "title": "",
+      "elements": {
+        "code1": "import pandas as pd",
+        "code2": "import matplotlib.pyplot as plt",
+        "code3": "from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer",
+        "code4": "from sklearn.model_selection import train_test_split",
+        "code5": "from sklearn.pipeline import Pipeline",
+        "code6": "from sklearn.linear_model import LogisticRegression",
+        "code7": "from sklearn.metrics import accuracy_score, confusion_matrix, classification_report"
+      }
+    }
+  ]
+}

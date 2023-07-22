@@ -1,0 +1,44 @@
+{
+  "importlib": [
+    {
+      "namelib": "",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": "",
+        "comment1": ""
+      }
+    },
+    {
+      "namelib": "None",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": "",
+        "comment1": ""
+      }
+    },
+    {
+      "namelib": "Save CSV",
+      "title": "",
+      "elements": {
+        "code1": "submit_df['intent'] = preds",
+        "code2": "submit_df.to_csv('submit_VectorizerTfidf_preprocess.csv', index =False)",
+        "code3": "",
+        "comment1": "# save to csv"
+      }
+    },
+    {
+      "namelib": "Create Df-sub",
+      "title": "",
+      "elements": {
+        "code1": "submit_df = pd.read_csv('/content/intent_sample_submission.csv')",
+        "code2": "",
+        "code3": "",
+        "comment1": "# create submission dataframe"
+      }
+    }
+  ]
+}

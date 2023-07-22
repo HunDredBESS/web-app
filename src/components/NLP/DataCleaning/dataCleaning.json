@@ -1,0 +1,44 @@
+{
+  "importlib": [
+    {
+      "namelib": "",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": "",
+        "comment1": ""
+      }
+    },
+    {
+      "namelib": "None",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": "",
+        "comment1": ""
+      }
+    },
+    {
+      "namelib": "convert to lower case",
+      "title": "",
+      "elements": {
+        "code1": "df['utterance'] = df['utterance'].str.lower()",
+        "code2": "",
+        "code3": "",
+        "comment1": "# convert text columns to lower case"
+      }
+    },
+    {
+      "namelib": "remove punctuation",
+      "title": "",
+      "elements": {
+        "code1": "df['utterance'] = df['utterance'].str.replace('[^\\w\\s]', '')",
+        "code2": "",
+        "code3": "",
+        "comment1": "# remove punctuation"
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "importlib": [
+    {
+      "namelib": "",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": "",
+        "comment1": ""
+      }
+    },
+    {
+      "namelib": "None",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": "",
+        "comment1": ""
+      }
+    },
+    {
+      "namelib": "Prediction",
+      "title": "",
+      "elements": {
+        "code1": "preds = pipeline.predict(df_test['utterance'])",
+        "code2": "",
+        "code3": "",
+        "comment1": "# prediction"
+      }
+    },
+    {
+      "namelib": "Preprocess",
+      "title": "",
+      "elements": {
+        "code1": "df_test['utterance'] = df_test['utterance'].str.lower()",
+        "code2": "df_test['utterance'] = df_test['utterance'].str.replace('[^\\w\\s]', '')",
+        "code3": "",
+        "comment1": "# convert text columns to lower case and remove punctuation"
+      }
+    },
+    {
+      "namelib": "Create Df-test",
+      "title": "",
+      "elements": {
+        "code1": "df_test = pd.read_csv('/content/test.csv')",
+        "code2": "",
+        "code3": "",
+        "comment1": "# create test dataframe"
+      }
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "importlib": [
+    {
+      "namelib": "",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": "",
+        "code4": "",
+        "comment1": ""
+      }
+    },
+    {
+      "namelib": "None",
+      "title": "",
+      "elements": {
+        "code1": "",
+        "code2": "",
+        "code3": "",
+        "code4": "",
+        "comment1": ""
+      }
+    },
+    {
+      "namelib": "Read the JSON file",
+      "title": "",
+      "elements": {
+        "code1": "df = pd.read_json('/content/train.json')",
+        "code2": "df",
+        "code3": "",
+        "code4": "",
+        "comment1": "# Read the JSON file into a Pandas DataFrame"
+      }
+    },
+    {
+      "namelib": "Value counts",
+      "title": "",
+      "elements": {
+        "code1": "df.value_counts('intent')",
+        "code2": "",
+        "code3": "",
+        "code4": "",
+        "comment1": "# Count value in intent column"
+      }
+    },
+    {
+      "namelib": "Plot chart",
+      "title": "",
+      "elements": {
+        "code1": "df['intent'].value_counts().plot.pie(figsize = (8,8), startangle = 75)",
+        "code2": "plt.title('intent', fontsize = 20)",
+        "code3": "plt.axis('off')",
+        "code4": "plt.show()",
+        "comment1": "# Plot chart"
+      }
+    }
+  ]
+}
