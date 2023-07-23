@@ -17,7 +17,7 @@ export default function detail_dataclean({}: Props) {
         >
           <summary className="flex cursor-pointer items-center justify-between gap-1.5">
             <h2 className="text-2xl font-medium  text-white">
-            Train ด้วย Decision Tree Algorithm
+              Train ด้วย Decision Tree Algorithm
             </h2>
 
             <span className="shrink-0 rounded-full  p-1.5  bg-gray-800 text-white sm:p-3">
@@ -37,35 +37,34 @@ export default function detail_dataclean({}: Props) {
           </summary>
 
           <p className="mt-4 mx-3 leading-relaxed text-xl text-gray-200">
-            สกัด feature จากข้อมูลอายุ เนื่องจากข้อมูลมี null จึงต้อง clean ก่อน
-            เลือกใช้ค่า mean ของอายุมาเติมในคารางที่ว่าง
+            Model Decision Tree เป็น Rule-Based Model ที่จะสร้างเงื่อนไข If-else
+            ขึ้นมาจากข้อมูลในตัวแปร
+            เพื่อที่จะแบ่งข้อมูลออกเป็นกลุ่มใหม่ที่สามารถอธิบาย Target
+            ได้ดีที่สุด โดยการสร้างเงื่อนไข If-else ในแต่ละตัวแปร จะถูกกำหนดด้วย
+            Objective Function ซึ่ง Model Decision Tree มี Objective Function
+            อยู่หลายตัว ตามประเภทของ Decision Tree นั้น ๆ
           </p>
           <ul className="mt-4 mx-3 leading-relaxed text-xl text-gray-200">
-            <li> - แบ่งอายุของผู้โดยสารออกเป็น 5 ช่วงอายุ  </li>
-            <li> - ดูความสัมพันธ์ของข้อมูลระหว่างแต่ละช่วงอายุกับอัตราการรอดชีวิต  </li>
+            <li>
+              {" "}
+                Decision tree คือ flowchart ที่มีรูปร่างเหมือน tree structure
+              โดย internal node แทนด้วย feature(บางคนเรียก attribute) แต่ละ
+              branch แทนด้วย decision rule แต่ละ leaf node แทนด้วย ผลลัพธ์
+              และจุดบนสุดของ tree คือ root node{" "}
+            </li>
+            {/* <li>
+              {" "}
+              - ดูความสัมพันธ์ของข้อมูลระหว่างแต่ละช่วงอายุกับอัตราการรอดชีวิต{" "}
+            </li>
             <li>
               - เปลี่ยนรูปแบบข้อมูลจากช่วงอายุ ให้เป็น ตัวเลขแบบ categories
               เพื่อให้ง่ายต่อการใช้งาน
-            </li>
+            </li> */}
           </ul>
           <br />
           <div className=" flex flex-row gap-5 justify-center h-auto mx-3 leading-relaxed text-xl text-gray-200">
-            
-              
-              <Image
-                src={Train_img}
-                width={320}
-                height={200}
-                alt="dataset img"
-              />
-              <Image
-                src={Acc_img}
-                width={320}
-                height={200}
-                alt="dataset img"
-              />
-            
-            
+            <Image src={Train_img} width={320} height={200} alt="dataset img" />
+            <Image src={Acc_img} width={320} height={200} alt="dataset img" />
           </div>
         </details>
       </div>

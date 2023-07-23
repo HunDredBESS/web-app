@@ -37,11 +37,10 @@ export default function detail_dataclean({}: Props) {
           </summary>
 
           <p className="mt-4 mx-3 leading-relaxed text-xl text-gray-200">
-            สกัด feature จากข้อมูลอายุ เนื่องจากข้อมูลมี null จึงต้อง clean ก่อน
-            เลือกใช้ค่า mean ของอายุมาเติมในคารางที่ว่าง
+            ทำการ Preprocess ข้อมูลชุด test ให้เหมือนกันกับ ข้อมูลชุดที่นำมา train เพื่อที่จะได้ผลรับที่ถูกต้องเมื่อ prediction
           </p>
           <ul className="mt-4 mx-3 leading-relaxed text-xl text-gray-200">
-            <li> - แบ่งอายุของผู้โดยสารออกเป็น 5 ช่วงอายุ  </li>
+            {/* <li> - แบ่งอายุของผู้โดยสารออกเป็น 5 ช่วงอายุ  </li> */}
             {/* <li> - ดูความสัมพันธ์ของข้อมูลระหว่างแต่ละช่วงอายุกับอัตราการรอดชีวิต  </li>
             <li>
               - เปลี่ยนรูปแบบข้อมูลจากช่วงอายุ ให้เป็น ตัวเลขแบบ categories

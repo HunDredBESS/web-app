@@ -17,7 +17,7 @@ export default function detail_dataclean({}: Props) {
         >
           <summary className="flex cursor-pointer items-center justify-between gap-1.5">
             <h2 className="text-2xl font-medium  text-white">
-            Train ด้วย K-Nearest Neighbors Algorithm
+              Train ด้วย K-Nearest Neighbors Algorithm
             </h2>
 
             <span className="shrink-0 rounded-full  p-1.5  bg-gray-800 text-white sm:p-3">
@@ -37,35 +37,29 @@ export default function detail_dataclean({}: Props) {
           </summary>
 
           <p className="mt-4 mx-3 leading-relaxed text-xl text-gray-200">
-            สกัด feature จากข้อมูลอายุ เนื่องจากข้อมูลมี null จึงต้อง clean ก่อน
-            เลือกใช้ค่า mean ของอายุมาเติมในคารางที่ว่าง
+            เป็นวิธีที่ใช้ในการจัดแบ่งคลาส โดยเทคนิคนี้จะตัดสินใจว่า
+            คลาสใดที่จะแทนเงื่อนไขหรือกรณีใหม่ๆ ได้บ้าง
+            โดยการตรวจสอบจำนวนบางจำนวน ในขั้นตอนวิธีการเพื่อนบ้านใกล้ที่สุด
+            ของกรณีหรือเงื่อนไขที่เหมือนกันหรือใกล้เคียงกันมากที่สุด
+            โดยจะหาผลรวม (Count Up) ของจำนวนเงื่อนไข หรือกรณีต่างๆ
+            สำหรับแต่ละคลาส และกำหนดเงื่อนไขใหม่ๆ
+            ให้คลาสที่เหมือนกันกับคลาสที่ใกล้เคียงกันมากที่สุด
           </p>
           <ul className="mt-4 mx-3 leading-relaxed text-xl text-gray-200">
-            <li> - แบ่งอายุของผู้โดยสารออกเป็น 5 ช่วงอายุ  </li>
-            <li> - ดูความสัมพันธ์ของข้อมูลระหว่างแต่ละช่วงอายุกับอัตราการรอดชีวิต  </li>
+            <li> - K- Nearest Neighbor เป็นอัลกอลิทึ่มที่ใช้ในการจัดกลุ่มข้อมูล (Classification) ซึ่งเป็นอัลกอลิทึ่มที่อยู่ในกลุ่มของ Supervised learning </li>
+            {/* <li>
+              {" "}
+              - ดูความสัมพันธ์ของข้อมูลระหว่างแต่ละช่วงอายุกับอัตราการรอดชีวิต{" "}
+            </li>
             <li>
               - เปลี่ยนรูปแบบข้อมูลจากช่วงอายุ ให้เป็น ตัวเลขแบบ categories
               เพื่อให้ง่ายต่อการใช้งาน
-            </li>
+            </li> */}
           </ul>
           <br />
           <div className=" flex flex-row gap-5 justify-center h-auto mx-3 leading-relaxed text-xl text-gray-200">
-            
-              
-              <Image
-                src={Train_img}
-                width={300}
-                height={350}
-                alt="dataset img"
-              />
-              <Image
-                src={Acc_img}
-                width={350}
-                height={350}
-                alt="dataset img"
-              />
-            
-            
+            <Image src={Train_img} width={300} height={350} alt="dataset img" />
+            <Image src={Acc_img} width={350} height={350} alt="dataset img" />
           </div>
         </details>
       </div>
