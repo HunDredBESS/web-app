@@ -42,13 +42,13 @@ export default function detail_dataclean({}: Props) {
 
           <div className="lg:gap-7 my-7 mx-0 px-8 leading-relaxed text-gray-200">           
             <div className="h-auto text-lg ">
-           จากที่ผมได้พูดไปในขั้นตอนก่อนหน้า ว่าชุดข้อมูลที่เรามีนั้นถูกแบ่งมาให้อย่างเท่าๆกันไม่มีหมวดไหนมากหรือน้อยเกินไป รวมถึงข้อมูลเองก็มีจำนวนมากพอ ทำให้เราไม่ต้องจัดการอะไรกับชุดข้อมูลที่มีมากนัก แต่ถึงอย่างนั้นก็ยังมีขั้นตอน preprocess เล็กๆน้อยๆที่จสามารถช่วยให้โมเดลของเราเรียนรู้ได้ง่ายขึ้น โดยวิธีการที่เราใช้มีอยู่สองอย่างหลักๆดังนี้  
+           จากที่ผมได้พูดไปในขั้นตอนก่อนหน้า ว่าชุดข้อมูลที่เรามีนั้นถูกแบ่งมาให้อย่างเท่าๆกันไม่มีหมวดไหนมากหรือน้อยเกินไป รวมถึงข้อมูลเองก็มีจำนวนมากพอ ทำให้เราไม่ต้องจัดการอะไรกับชุดข้อมูลที่มีมากนัก แต่ถึงอย่างนั้นก็ยังมีขั้นตอนการ preprocess เล็กๆน้อยๆสำหรับ Text Classification ที่ผมจะมาแนะนำ วิธีนี้สามารถช่วยให้โมเดลของเราเรียนรู้ได้ง่ายขึ้น โดยวิธีที่ใช้มีอยู่สองอย่างหลักๆดังนี้  
             </div>
           </div>  
 
           <div className="lg:gap-7 my-7 mx-0 px-8 leading-relaxed text-gray-200">           
             <div className="h-auto text-lg ">
-           1.ปรับตัวอักษรทั้งหมดให้เป็นพิมพ์เล็ก  
+           1.ปรับตัวอักษรทั้งหมดให้เป็นพิมพ์เล็ก (convert to lower case) 
             </div>
           </div>  
 
@@ -58,13 +58,19 @@ export default function detail_dataclean({}: Props) {
 
           <div className="lg:gap-7 my-7 mx-0 px-8 leading-relaxed text-gray-200">           
             <div className="h-auto text-lg ">
-           2.นำพวกเครื่องหมายวรรคตอนต่างๆออก(remove punctuation)   
+           2.นำพวกเครื่องหมายวรรคตอนต่างๆออก (remove punctuation)   
             </div>
           </div>  
 
           <div className="lg:gap-1 my-7 mx-10 px-8 flex flex-row">
           <Image src={Punctuation} width={500} height={500} alt="Read file" />
           </div>
+
+          <div className="lg:gap-7 my-7 mx-0 px-8 leading-relaxed text-gray-200">           
+            <div className="h-auto text-lg ">
+           หมายเหตุ : ถ้าหาก data ที่เรามีนั้น clean อยู่แล้ว เราสามารถข้ามขั้นตอนตรงส่วนนี้ไปได้เลยครับ    
+            </div>
+          </div> 
 
         </details>
 

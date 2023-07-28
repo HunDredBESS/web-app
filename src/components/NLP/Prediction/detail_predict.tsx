@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Barval_img from "public/NLP/barval.jpg";
-import Dftest from "public//NLP/Df-test.png";
+import Dftest from "public//NLP/Df-test1.png";
 import Pretest from "public/NLP/Preprocess-test.png";
 import Prediction from "public/NLP/Prediction.png";
 
@@ -50,9 +50,15 @@ function detail_import({}: Props) {
 
           <div className="lg:gap-7 my-5 mx-0 px-8 leading-relaxed  text-gray-200">
             <div className="h-auto text-lg ">
-            จากนั้นก็ทำการ preprocess/cleaning ข้อมูลชุดเทส (เนื่องจากเรา preprocess ชุดข้อมูลก่อนเทรน เพราะฉะนั้นโมเดลที่เราเทรนเรียนรู้จากข้อมูลที่ clean แล้ว ดังนั้นการจะนำโมเดลที่เราเทรนมาใช้ เพื่อให้ได้ประสิทธิภาพดีสุด ข้อมูลชุดเทสก็ควรจะเป็นข้อมูลรูปแบบเดียวกับที่ใช้เทรน เราเลยต้องทำการ preprocess ข้อมูลชุดเทสด้วย โดยจะใช้วิธีการเดียวกันกับที่ทำตอน preprocess ข้อมูลชุดเทรน) 
+            จากนั้นก็ทำการ preprocessing/cleaning ข้อมูลชุดเทส (เนื่องจากเรา preprocess ชุดข้อมูลก่อนเทรน โมเดลที่เราเทรนนั้นเรียนรู้จากชุดข้อมูลที่ clean แล้ว ดังนั้นการจะนำโมเดลที่เราเทรนมาใช้อย่างมีประสิทธิภาพ ข้อมูลชุดเทสก็ควรจะเป็นข้อมูลรูปแบบเดียวกับที่ใช้เทรน เราเลยต้องทำการ preprocess ข้อมูลชุดเทสด้วย โดยจะใช้วิธีการเดียวกันกับที่ทำตอน preprocess ข้อมูลชุดเทรน) 
             </div>
           </div>   
+
+          <div className="lg:gap-7 my-5 mx-0 px-8 leading-relaxed  text-gray-200">
+            <div className="h-auto text-lg ">
+            หมายเหตุ : ถ้าหากชุดข้อมูลที่มีนั้น clean อยู่แล้ว สามารถข้ามขั้นตอนนี้ไปได้เลยครับ 
+            </div>
+          </div>  
 
           <div className="lg:gap-1 my-7 mx-10 px-8 flex flex-row">
           <Image src={Pretest} width={900} height={900} alt="Read file" />

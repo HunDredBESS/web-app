@@ -7,6 +7,8 @@ import ImportBox4 from "@/components/NLP/DataCleaning/ImportBox4";
 import ImportBox3 from "@/components/NLP/Model/ImportBox3";
 import ImportBox5 from "@/components/NLP/Prediction/ImportBox5";
 import SaveCSV from "@/components/NLP/CSV/ImportBox6";
+import Image from "next/image";
+import Pipeline from "public/NLP/pipeline.png";
 
 type Props = {}
 
@@ -95,6 +97,19 @@ export default function NLP({}: Props) {
         <div className="box-border h-fit w-auto p-2 bg-gradient-to-r from-slate-800 via-slate-900 to-slate-800 border-solid">
           <div className="text-3xl items-center box-border text-white pt-6 px-6">
            Text Classification
+          </div>
+        </div>
+
+        <div className=" box w-full min-h-10 bg-gray-800 rounded-lg mt-3 mb-10 p-5 text-2xl">
+          {/* <h1 className="text-gray-200" >Data Science</h1> */}
+          <div className="leading-relaxed text-gray-200">
+            <div className="h-auto text-2xl font-medium">
+            Pipeline
+            </div>
+          </div>
+
+          <div className="lg:gap-1 my-7 flex flex-row ">
+          <Image src={Pipeline} width={900} height={900} alt="Read file" />
           </div>
         </div>
 

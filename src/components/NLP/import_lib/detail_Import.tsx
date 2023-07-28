@@ -41,7 +41,7 @@ function detail_import({}: Props) {
 
           <div className="lg:gap-7 my-7 mx-0 px-8 leading-relaxed  text-gray-200">
             <div className="h-auto text-lg ">
-            ชุดข้อมูลที่จะนำมาเป็นตัวอย่างนี้เป็นชุดข้อมูลที่ได้จากโจทย์ Hackathon โครงการ Super ai ของ AiAT 
+            ชุดข้อมูลที่จะนำมาเป็นตัวอย่างนี้เป็นชุดข้อมูลที่ได้จากโจทย์ Hackathon โครงการ Super AI ของทาง AIAT ครับ
             </div>
           </div>   
 
@@ -60,7 +60,7 @@ function detail_import({}: Props) {
 
           <div className="lg:gap-7 my-7 mx-0 px-8 leading-relaxed text-gray-200">           
             <div className="h-auto text-lg ">
-            เมื่อมี dataset เรียบร้อยแล้วต่อไปก็จะเป็นขั้นตอนของการ import libraries ที่จำเป็นต้องใช้ โดยไลบรารีหลักๆที่ผมเลือกมาใช้สำหรับโจทย์ intent classification โจทย์นี้มีดังต่อไปนี้
+            เมื่อมี dataset เรียบร้อยแล้วต่อไปก็จะเป็นขั้นตอนของการ import libraries ที่จำเป็นต้องใช้ โดยไลบรารีหลักๆที่ผมเลือกมาใช้สำหรับโจทย์ Text Classification โจทย์นี้มีดังต่อไปนี้
             </div>
           </div>  
 

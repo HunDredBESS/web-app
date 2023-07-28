@@ -38,6 +38,42 @@ function detail_import({}: Props) {
 
           <div className="lg:gap-7 my-7 mx-0 px-8 leading-relaxed text-gray-200">
             <div className="h-auto text-xl font-medium">
+            1. Load Dataset
+            </div>
+          </div>   
+
+          <div className="lg:gap-7 my-7 mx-0 px-8 leading-relaxed text-gray-200">
+            <div className="h-auto text-lg ">
+            ขั้นตอนนี้ก็คือการสร้าง dataframe ของชุดข้อมูลที่เราจะนำมาเทรนครับ ซึ่งจริงๆเราได้ผ่านการทำขั้นตอนนี้ไปแล้วในส่วนของการ EDA ข้อมูล โดยเราได้กำหนดให้ตัวแปร df = dataframe ของชุดข้อมูลเราครับ แต่ตรงส่วนนี้ผมได้ทำการสร้าง dataframe ใหม่ขึ้นมาอีกอัน เพื่อไม่ให้สับสนเท่านั้นเองครับ เลยเกิดเป็นโค้ดตรงส่วนที่เขียนว่า news_df = df ทั้งนี้ทุกคนสารถนำ dataframe ที่สร้างในตอนแรก(df) มาใช้เลยโดยไม่ต้องกำหนดใหม่ขึ้นมาแบบผมก็ได้ครับ ก็จะสามารถข้ามขั้นตอนตรงส่วนนี้ไปได้เลย
+            </div>
+          </div>  
+
+          <div className="lg:gap-7 my-7 mx-0 px-8 leading-relaxed text-gray-200">
+            <div className="h-auto text-xl font-medium">
+            2. Split Data
+            </div>
+          </div>  
+
+          <div className="lg:gap-7 my-7 mx-0 px-8 leading-relaxed text-gray-200">
+            <div className="h-auto text-lg ">
+            ขั้นตอนนี้เป็นการแบ่งชุดข้อมูลของเราออกเป็น 2 ส่วน ส่วนนึงจะใช้สำหรับนำไปเทรนตัวโมเดล และอีกส่วนนึงเก็บไว้ใช้เทสตัวโมเดล เพื่อประเมินดูว่าโมเดลของเราทำงานได้มีประสิทธิภาพมากแค่ไหนครับ (โค้ดตัวอย่างสามารถกดดูได้ที่โค้ดบล็อค Split the data ด้านล่างนี้เลยครับ) โดยในส่วนนี้จะมีคำสั่งที่ควรทำความเข้าใจเพิ่มเติมอยู่ 2 จุดครับ จุดแรก test_size = 0.1 ตรงส่วนนี้หมายถึงเราจะแบ่งข้อมูลที่จะเก็บไว้เป็นชุดเทสออกจากชุดข้อมูลทั้งหมดในสัดส่วน 10% ครับ และจุดที่สอง random_state คำสั่งนี้ใช้เพื่อให้การแบ่งชุดข้อมูลเป็นแบบสุ่มเหมือนกันทุกครั้งที่ทำการรันโค้ดนี้ครับ
+            </div>
+          </div>  
+
+          <div className="lg:gap-7 my-7 mx-0 px-8 leading-relaxed text-gray-200">
+            <div className="h-auto text-xl font-medium">
+            3. Create Pipeline
+            </div>
+          </div>  
+
+          <div className="lg:gap-7 my-7 mx-0 px-8 leading-relaxed text-gray-200">
+            <div className="h-auto text-lg ">
+            ขั้นตอนนี้คือการใช้คำสั่ง Pipeline ของไลบรารี sklearn ในการกำหนดว่าขั้นตอนในการเทรนข้อมูลของเราเนี่ยจะให้ผ่านกระบวนการอะไรบ้าง โดยสำหรับโจทย์ Text Classification โจทย์นี้ผมจะใช้หลักๆอยู่สามตัวนั่นก็คือ CountVectorizer, Tfidf, และ LogisticRegression ครับ 
+            </div>
+          </div>  
+
+          <div className="lg:gap-7 my-7 mx-0 px-8 leading-relaxed text-gray-200">
+            <div className="h-auto text-xl font-medium">
             Vectorizer + Tfidf + LogisticRegression 
             </div>
           </div>   
@@ -90,8 +126,38 @@ function detail_import({}: Props) {
           </div>
 
           <div className="lg:gap-7 my-7 mx-0 px-8 leading-relaxed text-gray-200">
+            <div className="h-auto text-xl font-medium">
+            4. Train Model
+            </div>
+          </div>  
+
+          <div className="lg:gap-7 my-7 mx-0 px-8 leading-relaxed text-gray-200">
             <div className="h-auto text-lg ">
-            เมื่อเทรนเสร็จเรียบร้อยเราสามารถประเมินโมเดลของเราโดย print accuracy และ report ออกมาดูได้ครับ (โค้ดตรงส่วนนี้สามารถกดตรง evaluate the model ใน code block ด้านล่างเพื่อดูตัวอย่างโค้ดได้เลยครับ)
+            ขั้นตอนนี้ก็สั้นๆเลยครับมันคือการเทรนตัวโมเดลของเรานั่นเอง เนื่องจากเราได้สร้าง pipeline ของ model เราไว้แล้วดังนั้นเราสามารถใช้คำสั่ง pipeline.fit(ข้อมูลชุดเทรนที่เราได้แบ่งไว้) ได้เลยครับ 
+            </div>
+          </div>  
+
+          <div className="lg:gap-7 my-7 mx-0 px-8 leading-relaxed text-gray-200">
+            <div className="h-auto text-xl font-medium">
+            5. Test Model
+            </div>
+          </div>  
+
+          <div className="lg:gap-7 my-7 mx-0 px-8 leading-relaxed text-gray-200">
+            <div className="h-auto text-lg ">
+            ขั้นตอนนี้ก็สั้นๆอีกเช่นกันครับ มันคือการนำข้อมูลที่เราแบ่งไว้ใช้สำหรับเทสตอนแรกมาลองเทสตัวโมเดลเราครับว่าสามารถ predict ได้ตรงกับคำตอบจริงๆมากน้อยแค่ไหน
+            </div>
+          </div>  
+
+          <div className="lg:gap-7 my-7 mx-0 px-8 leading-relaxed text-gray-200">
+            <div className="h-auto text-xl font-medium">
+            6. Evaluate Model
+            </div>
+          </div> 
+
+          <div className="lg:gap-7 my-7 mx-0 px-8 leading-relaxed text-gray-200">
+            <div className="h-auto text-lg ">
+            เมื่อทำขั้นตอนทั้งหมดเสร็จเรียบร้อยแล้วเราสามารถประเมินประสิทธิภาพของโมเดลเราโดย print accuracy และ report ออกมาดูได้ครับ (โค้ดตรงส่วนนี้สามารถกดตรง evaluate the model ในโค้ดบล็อคด้านล่างเพื่อดูตัวอย่างโค้ดได้เลยครับ)
             </div>
           </div>   
 
