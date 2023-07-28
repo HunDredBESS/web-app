@@ -54,84 +54,84 @@ function detail_import({}: Props) {
             </div>
           </div> 
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl">numpy</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             หรือ Numerical Python เป็นโมดูลสำหรับการคำนวณทางตัวเลขและการจัดการกับข้อมูลที่เกี่ยวข้องกับเมทริกซ์และอาเรย์ (arrays) ใน Python
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 12))</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             สร้างหน้าต่างกราฟแบบแผนภูมิเป็นรูปแบบแกนตั้ง 2 แถว และแกนนอน 1 คอลัมน์ โดยกำหนดขนาดของรูปแบบเป็น 12x12 หน่วย
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">train_generator</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             เป็นตัวเตรียมข้อมูลสำหรับการฝึกโมเดล ที่ใช้ในการสร้างชุดตัวอย่างสำหรับการฝึกสอน
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">ax1.plot(history.history['loss'], color='b', label='Training loss')</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             วาดเส้นกราฟของค่าสูญเสียในข้อมูลฝึกสอน (training loss) โดยใช้ข้อมูลจาก history.history['loss'] โดยสีเส้นเป็นสีน้ำเงิน (blue) และใส่ชื่อตัวกราฟเป็น "Training loss".
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">ax1.plot(history.history['val_loss'], color='r', label='validation loss')</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             วาดเส้นกราฟของค่าสูญเสียในข้อมูลทดสอบ (validation loss) โดยใช้ข้อมูลจาก history.history['val_loss'] โดยสีเส้นเป็นสีแดง (red) และใส่ชื่อตัวกราฟเป็น "Validation loss".
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">ax1.set_xticks(np.arange(0, epochs, 10))</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             กำหนดแกน x ของกราฟให้แสดงตัวเลขบนแกน x ที่เป็นเลขจำนวนเต็มตั้งแต่ 0 ถึงจำนวนรอบการฝึก (epochs) โดยเพิ่มทีละ 10
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">ax1.set_yticks(np.arange(0, 1, 0.1))</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             กำหนดแกน y ของกราฟให้แสดงตัวเลขบนแกน y ที่เป็นเลขทศนิยมตั้งแต่ 0 ถึง 1 โดยเพิ่มทีละ 0.1.
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">ax2.plot(history.history['acc'], color='b', label='Training accuracy')</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             วาดเส้นกราฟของความแม่นยำในข้อมูลฝึกสอน (training accuracy) โดยใช้ข้อมูลจาก history.history['acc'] โดยสีเส้นเป็นสีน้ำเงิน (blue) และใส่ชื่อตัวกราฟเป็น "Training accuracy".
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">ax2.plot(history.history['acc'], color='b', label='Training accuracy')</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             วาดเส้นกราฟของความแม่นยำในข้อมูลฝึกสอน (training accuracy) โดยใช้ข้อมูลจาก history.history['acc'] โดยสีเส้นเป็นสีน้ำเงิน (blue) และใส่ชื่อตัวกราฟเป็น "Training accuracy".
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">ax2.plot(history.history['val_acc'], color='r',label='Validation accuracy')</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             วาดเส้นกราฟของความแม่นยำในข้อมูลทดสอบ (validation accuracy) โดยใช้ข้อมูลจาก history.history['val_acc'] โดยสีเส้นเป็นสีแดง (red) และใส่ชื่อตัวกราฟเป็น "Validation accuracy".
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">ax2.set_xticks(np.arange(0, epochs, 10))</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             กำหนดแกน x ของกราฟให้แสดงตัวเลขบนแกน x ที่เป็นเลขจำนวนเต็มตั้งแต่ 0 ถึงจำนวนรอบการฝึก (epochs) โดยเพิ่มทีละ 10.
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">legend = plt.legend(loc='best', shadow=True)</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             เพิ่มสัญลักษณ์คำอธิบาย (legend) ของกราฟโดยกำหนดให้ปรากฏในตำแหน่งที่เหมาะสม (best) และมีเงา.

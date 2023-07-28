@@ -61,28 +61,28 @@ function detail_import({}: Props) {
             </div>
           </div> 
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl">test_df['category'] = np.argmax(predict, axis=-1)</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             ทำการกำหนดคอลัมน์ "category" ใน DataFrame test_df โดยใช้ฟังก์ชัน np.argmax เพื่อหาค่า index ที่มีค่าสูงสุดในแต่ละแถวของตัวแปร predict ซึ่งเป็นผลลัพธ์จากการทำนาย การใช้ axis=-1 หมายถึงการคำนวณค่าสูงสุดในแต่ละแถว
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">label_map = dict((v,k) for k,v in train_generator.class_indices.items())</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             สร้างพจนานุกรม (dictionary) ที่ใช้สำหรับแปลงค่าหมวดหมู่ที่เป็นตัวเลขกลับเป็นค่าหมวดหมู่ที่เข้าใจง่ายขึ้น โดยใช้ค่าที่ได้จาก train_generator.class_indices ที่เป็นพจนานุกรมที่กำหนดค่าหมวดหมู่ให้กับแต่ละตัวอย่างในชุดข้อมูลการฝึก
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">test_df['category'] = test_df['category'].replace(label_map)</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             ใช้ฟังก์ชัน replace เพื่อแทนที่ค่าหมวดหมู่ในคอลัมน์ "category" ของ DataFrame test_df ด้วยค่าหมวดหมู่ที่ถูกแปลงกลับมาจาก label_map
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">test_df['category'].value_counts().plot.bar()</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             นับจำนวนข้อมูลในแต่ละหมวดหมู่ที่ปรากฏในคอลัมน์ "category" ของ DataFrame test_df แล้วทำการสร้างกราฟแท่ง (bar plot) เพื่อแสดงผลลัพธ์

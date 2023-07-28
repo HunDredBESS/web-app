@@ -52,49 +52,49 @@ function detail_import({}: Props) {
             </div>
           </div> 
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl">EarlyStopping</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             เป็น Callback ที่ใช้ในกระบวนการฝึกสอนโมเดลประสาทเทียม (neural network) เพื่อหยุดการฝึกสอนเมื่อไม่มีการปรับปรุงอีกต่อไป โดยตรวจสอบค่าสถานะที่กำหนดในระหว่างการฝึกสอน เช่นค่าสูญเสีย (loss) หรือค่าความแม่นยำ (accuracy) และหยุดการฝึกสอนเมื่อค่าสถานะไม่เกิดการเปลี่ยนแปลงตามที่กำหนดในระยะเวลาที่กำหนดไว้ล่วงหน้า (patience) ซึ่งช่วยลดการเกิดการเรียนรู้เกินไป (overfitting) และช่วยประหยัดเวลาในการฝึกสอนโมเดล
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">ReduceLROnPlateau</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             เป็น Callback ที่ใช้ในกระบวนการฝึกสอนโมเดลประสาทเทียม (neural network) เพื่อลดอัตราการเรียนรู้ (learning rate) เมื่อค่าสถานะที่กำหนดไม่เกิดการปรับปรุง เช่นลด learning rate เมื่อค่าสูญเสียไม่ลดลงหรือค่าความแม่นยำไม่เพิ่มขึ้น
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">monitor='val_accuracy'</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             เป็นค่าที่ใช้ตรวจสอบความเปลี่ยนแปลงในค่าความแม่นยำในชุดข้อมูลทดสอบ (validation set) ในการฝึกสอนโมเดล ในที่นี้จะตรวจสอบค่าความแม่นยำในชุดทดสอบเพื่อตัดสินใจว่าจะลดอัตราการเรียนรู้หรือไม่
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">patience=2</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             เป็นจำนวนรอบการฝึกสอนที่ถ้าไม่มีการปรับปรุงในค่าความแม่นยำในชุดทดสอบตามเงื่อนไขที่กำหนด (monitor) จะทำการลดอัตราการเรียนรู้
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">verbose=1</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             เป็นการกำหนดระดับการแสดงผลเกี่ยวกับการลดอัตราการเรียนรู้ ในที่นี้เลือกให้แสดงผลข้อความบางส่วน
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">factor=0.5</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             เป็นตัวคูณที่ใช้ในการลด learning rate โดยการคูณอัตราการเรียนรู้ที่กำหนดในตอนแรกด้วยตัวคูณนี้
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">min_lr=0.00001</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             เป็นอัตราการเรียนรู้ที่ต่ำสุดที่จะใช้ หากอัตราการเรียนรู้ลดลงแล้วแต่ยังไม่ได้ถึงอัตราการเรียนรู้ต่ำสุดที่กำหนด

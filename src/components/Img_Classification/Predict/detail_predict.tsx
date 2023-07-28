@@ -50,21 +50,21 @@ function detail_import({}: Props) {
             </div>
           </div> 
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl">predict</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             เป็นตัวแปรที่เก็บผลลัพธ์ที่ได้จากการทำนายของโมเดล
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl">predict_generator</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             เป็นวิธีใน Keras ที่ใช้ในการทำนายผลลัพธ์จากชุดข้อมูลที่กำหนด
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl">steps=np.ceil(nb_samples/batch_size)</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             กำหนดจำนวนครั้งที่ต้องทำนายผลลัพธ์ โดยคำนวณจากจำนวนตัวอย่างที่ต้องทำนาย (nb_samples) และขนาดแบตช์ (batch_size) โดยใช้ np.ceil เพื่อปัดขึ้นให้เป็นจำนวนเต็ม (เนื่องจากต้องการให้ทำนายครบทุกตัวอย่างในชุดข้อมูลทดสอบ)

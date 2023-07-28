@@ -50,31 +50,31 @@ function detail_import({}: Props) {
             </div>
           </div> 
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl">train_test_split</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             เป็นฟังก์ชันที่ใช้ในการแบ่งชุดข้อมูลเป็นชุดข้อมูลฝึกสอน (training set) และชุดข้อมูลทดสอบ (test set) เพื่อใช้ในการประเมินประสิทธิภาพของโมเดลประสาทเทียม (neural network) หรือโมเดลเรียนรู้อื่น ๆ
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">test_size=0.20</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             เป็นการแบ่งข้อมูลทดสอบออกจากชุดข้อมูลในสัดส่วน 20%
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">random_state</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             เพื่อให้การแบ่งชุดข้อมูลเป็นแบบสุ่มเหมือนกันทุกครั้งที่ทำการรันโค้ดนี้
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">reset_index(drop=True)</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
-            เป็นเมธอดที่ใช้ในการรีเซ็ตดัชนีของแถวใน DataFrame เพื่อให้ดัชนีของแถวเริ่มต้นที่ 0 และลบดัชนีเดิมของแถวออก เมื่อใช้ drop=True ค่าดัชนีเดิมของแถวจะถูกลบออกและไม่ถูกเก็บไว้ในคอลัมน์ใด ๆ ใน DataFrame ใหม่ที่ได้รับการรีเซ็ต
+            เป็นวิธีที่ใช้ในการรีเซ็ตดัชนีของแถวใน DataFrame เพื่อให้ดัชนีของแถวเริ่มต้นที่ 0 และลบดัชนีเดิมของแถวออก เมื่อใช้ drop=True ค่าดัชนีเดิมของแถวจะถูกลบออกและไม่ถูกเก็บไว้ในคอลัมน์ใด ๆ ใน DataFrame ใหม่ที่ได้รับการรีเซ็ต
             </div>
           </div>
 

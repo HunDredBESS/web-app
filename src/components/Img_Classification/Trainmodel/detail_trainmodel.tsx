@@ -54,49 +54,49 @@ function detail_import({}: Props) {
             </div>
           </div> 
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl">epochs=50</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             กำหนดจำนวนรอบการฝึกโมเดลทั้งหมดให้เป็น 50 รอบ (epochs)
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">model.fit_generator()</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             เป็นฟังก์ชันที่ใช้ในการฝึกโมเดล โดยรับข้อมูลจากตัวเตรียมข้อมูลสำหรับการฝึก (train_generator) เพื่อปรับพารามิเตอร์ในโมเดลให้เหมาะสมกับข้อมูล
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">train_generator</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             เป็นตัวเตรียมข้อมูลสำหรับการฝึกโมเดล ที่ใช้ในการสร้างชุดตัวอย่างสำหรับการฝึกสอน
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">validation_data=validation_generator</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             ชุดข้อมูลที่ใช้ในการตรวจสอบประสิทธิภาพของโมเดล ในที่นี้คือชุดตัวอย่างสำหรับการทดสอบ (validation set) ที่ถูกสร้างขึ้นโดยตัวเตรียมข้อมูล (validation_generator)
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">validation_steps=total_validate//batch_size</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             กำหนดจำนวนขั้นตอนการตรวจสอบในแต่ละรอบ โดยคำนวณจากจำนวนชุดตัวอย่างสำหรับการทดสอบ (validation set) หารด้วยขนาดชุดข้อมูล (batch size)
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">steps_per_epoch=total_train//batch_size</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             กำหนดจำนวนขั้นตอนในการฝึกในแต่ละรอบ โดยคำนวณจากจำนวนชุดตัวอย่างสำหรับการฝึกสอน (training set) หารด้วยขนาดชุดข้อมูล (batch size)
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">model.save</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             เพื่อบันทึกโมเดลที่เทรน

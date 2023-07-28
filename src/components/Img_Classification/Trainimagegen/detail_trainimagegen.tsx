@@ -58,56 +58,56 @@ function detail_import({}: Props) {
             </div>
           </div> 
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl">ImageDataGenerator</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             เป็นคลาสใน Keras ที่ใช้สำหรับการเพิ่มความหลากหลายและปรับแต่งชุดข้อมูลภาพในการฝึกสอนโมเดลปัญญาประดิษฐ์ เพื่อเพิ่มประสิทธิภาพและประสิทธิผลของโมเดลที่ได้รับการฝึกสอน สามารถทำการสร้างชุดข้อมูลภาพที่ปรับแต่งได้โดยการใช้เทคนิคต่างๆ เช่นการหมุนภาพ, การปรับขนาดภาพ, การสลับภาพแนวนอนหรือแนวตั้ง, การเพิ่มเติมภาพเพิ่มเข้าไป เป็นต้น
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">rotation_range=15</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             กำหนดระดับการหมุนภาพในช่วง -15 ถึง +15 องศา
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">rescale=1./255</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             กำหนดการปรับขนาดค่าความสว่างของภาพให้อยู่ในช่วง 0-1
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">shear_range=0.1</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             กำหนดระดับการเอียงภาพในช่วง -0.1 ถึง +0.1
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">zoom_range=0.2</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             กำหนดระดับการซูมภาพในช่วง 0.8-1.2
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">horizontal_flip=True</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             เปลี่ยนเส้นฉากในภาพเพื่อสร้างภาพที่พลิกแนวนอน
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">width_shift_range=0.1</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             กำหนดระดับการเลื่อนภาพในแนวนอนในช่วง -0.1 ถึง +0.1
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">height_shift_range=0.1</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             กำหนดระดับการเลื่อนภาพในแนวตั้งในช่วง -0.1 ถึง +0.1
@@ -147,6 +147,7 @@ function detail_import({}: Props) {
         </details> */}
       </div>
     </>
+  
   );
 }
 

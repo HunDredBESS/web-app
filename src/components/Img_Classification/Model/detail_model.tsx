@@ -112,35 +112,35 @@ function detail_import({}: Props) {
             </div>
           </div> 
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl">from keras.models import Sequential</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             เป็นการนำเข้าคลาส Sequential จากไลบรารี Keras เพื่อใช้ในการสร้างโมเดลประสาทเทียมแบบลำดับ (Sequential Neural Network) ในโปรแกรม Python
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">GlobalAveragePooling2D()</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             เป็นเลเยอร์ที่ใช้ในโครงสร้างของโมเดลประสาทเทียม (neural network) เพื่อเปลี่ยนข้อมูลจากรูปร่างที่เป็นเชิงพื้นฐาน (spatial) เป็นรูปร่างที่เป็นเวกเตอร์ (vector) โดยหาค่าเฉลี่ยของข้อมูลในแต่ละช่อง (channel) ของภาพ และส่งออกเป็นเวกเตอร์เดียวกันสำหรับทุกช่องข้อมูล
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">Dense()</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             เป็นเลเยอร์ที่ใช้ในการสร้างเลเยอร์ที่เชื่อมต่อแบบเต็ม (fully connected layer) ในโมเดลประสาทเทียม ซึ่งเป็นเลเยอร์ที่ทุกๆ โหนดในเลเยอร์ก่อนหน้านี้จะเชื่อมต่อกับโหนดทุกๆ โหนด
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">BatchNormalization()</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             เป็นเลเยอร์ที่ใช้ในโครงสร้างของโมเดลประสาทเทียม (neural network) เพื่อปรับปรุงประสิทธิภาพและการเทรนโมเดล โดยการปรับปรุงการกระจายค่าข้อมูลในแต่ละชั้นของโมเดล เพื่อให้ค่าเฉลี่ยของข้อมูลในแต่ละชั้นมีค่าใกล้เคียงกันและค่าส่วนเบี่ยงเบนมาตรฐานเป็นไปในทิศทางเดียวกัน
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:gap-1 my-3 mx-10 px-8 text-gray-200">
             <div className="h-auto text-xl ">Dropout()</div>
             <div className="h-auto text-lg lg:gap-1 mx-10">
             เป็นเลเยอร์ที่ใช้ในโครงสร้างของโมเดลประสาทเทียม (neural network) เพื่อลดการเกิดการเรียนรู้เกินไป (overfitting) ในกระบวนการเทรนโมเดล โดยการประยุกต์ใช้การสุ่มลบบางความสัมพันธ์ระหว่างโหนดในเลเยอร์ที่เลือก ซึ่งจะช่วยในการป้องกันและลดการเรียนรู้ที่ผิดปกติที่อาจเกิดขึ้นในข้อมูลการฝึกสอน
