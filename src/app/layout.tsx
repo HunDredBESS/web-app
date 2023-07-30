@@ -37,6 +37,10 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        {/* <link rel="icon web" href="./AIAT_icon.ico" sizes="any" /> */}
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body className={inter.className}>
         <nav className=" border-gray-200 bg-gray-900 fixed w-full z-10 shadow-xl bg-opacity-80 ">
           {/* <nav className={`fixed w-full z-10 ${ isSticky ? 'bg-white border-gray-200 dark:bg-gray-900 shadow-lg' : 'bg-transparent'}`}> */}
@@ -62,14 +66,14 @@ export default function RootLayout({
                     Home
                   </Link>
                 </li> */}
-                <li>
+                {/* <li>
                   <Link
                     href="/about"
                     className="block py-2 pl-3 pr-4  rounded md:border-0  md:p-0 text-white md:hover:text-blue-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent"
                   >
                     About
                   </Link>
-                </li>
+                </li> */}
                 {/* <li>
                   <Link
                     href="/Test-page"

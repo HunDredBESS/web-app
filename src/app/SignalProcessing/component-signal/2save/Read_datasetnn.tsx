@@ -4,10 +4,10 @@ import { CiCirclePlus } from "react-icons/ci";
 import { MdDeleteOutline } from "react-icons/md";
 
 import BoxNew from "../BoxComponent/BoxNew";
-import Detaildataclean from "./detail_import";
+import Detaildataclean from "./detail_readdataset1";
 
 import Image from "next/image";
-import Numpy_img from "public/signal/numpy_logo.png";
+// import Numpy_img from "public/signal/numpy_logo.png";
 
 type Props = {};
 
@@ -51,22 +51,39 @@ export default function DataCleaning({}: Props) {
     const inputValue3 = childdata.input3 || "";
     const inputValue4 = childdata.input4 || "";
 
-    if (childdata.option === "pandas") {
-      setFormData((prevData) => ({ ...prevData, [id]: `import pandas as pd` }));
-    } else if (childdata.option === "numpy") {
-      setFormData((prevData) => ({ ...prevData, [id]: `import numpy as np` }));
-    } else if (childdata.option === "matplotlib") {
-      setFormData((prevData) => ({
-        ...prevData,
-        [id]: `import matplotlib.pyplot as plt`,
-      }));
-    } else if (childdata.option === "seaborn") {
-      setFormData((prevData) => ({
-        ...prevData,
-        [id]: `import seabon as sns`,
-      }));
-    } else if (childdata.option === "sklearn") {
-      setFormData((prevData) => ({ ...prevData, [id]: `import sklearn ` }));
+    if (childdata.option === "pre and save") {
+      setFormData((prevData) => ({ ...prevData, [id]: `
+      import os
+      import numpy as np
+      import matplotlib.pyplot as plt
+      for idx, row in tqdm(anno.iterrows()):
+            path = row['id']
+            label = row['class']
+            path_img = os.path.basename(path).replace('.npy', '.jpg')
+            IQ_data = np.load(path)
+            fft_data = Range_frequency(IQ_data)
+            #save
+            img = Image.fromarray(fft_data[0])
+            img = img.resize((224, 224))
+            plt.imsave(f'/content/data/train/{label}/{path_img}', img, cmap='viridis')` }));
+    // } else if (childdata.option === "code") {
+    //   setFormData((prevData) => ({ ...prevData, [id]: `def foo(x):
+    //   return f'./train/train/{x}.npy'
+     
+    // data_train = pd.read_csv('/content/annotations.csv')
+    // data_train['id'] = data_train['id'].apply(foo)` }));
+    // // } else if (childdata.option === "matplotlib") {
+    //   setFormData((prevData) => ({
+    //     ...prevData,
+    //     [id]: `import matplotlib.pyplot as plt`,
+    //   }));
+    // } else if (childdata.option === "seaborn") {
+    //   setFormData((prevData) => ({
+    //     ...prevData,
+    //     [id]: `import seabon as sns`,
+    //   }));
+    // } else if (childdata.option === "sklearn") {
+    //   setFormData((prevData) => ({ ...prevData, [id]: `import sklearn ` }));
     } else {
       try {
         setFormData((prevData) => ({ ...prevData, [id]: childdata.option1 }));
@@ -110,7 +127,7 @@ export default function DataCleaning({}: Props) {
       <Detaildataclean />
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8 place-items-stretch mt-2 h-fit w-auto p-2">
         <div className="relative h-auto min-w-[310px] w-full p-5 rounded-lg bg-gradient-to-r from-gray-800 to-gray-800 border-1 border-black">
-          <h1 className="text-xl text-white">1 import libraries</h1>
+          <h1 className="text-xl text-white">Import code</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-1 grid-rows-none gap-2">
             {componentCodes.map((code) => (
               <div key={code.key}>{code}</div>
@@ -126,9 +143,9 @@ export default function DataCleaning({}: Props) {
 
         <div className="h-fit w-auto p-5 rounded-lg bg-gradient-to-r from-gray-800 to-gray-800 border-1 border-black">
           <BoxNew code={resultDeleteLine} />
-          <div className=" flex flex-row justify-center">
+          {/* <div className=" flex flex-row justify-center">
             <Image src={Numpy_img} width={90} height={80} alt="numpy Logo" />
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="block bg-red-500 w-full h-auto">
@@ -185,17 +202,17 @@ function DataCleaningChild({
   }, [option, childToParent, id]);
 
   const options: string[] = [
-    "pandas",
-    "numpy",
-    "matplotlib",
-    "seaborn",
-    "sklearn",
+    "pre and save",
+    // "code",
+    // "matplotlib",
+    // "seaborn",
+    // "sklearn",
   ];
 
   return (
     <>
       <div className="flex flex-row md:flex-cols align-middle h-auto w-auto p-2 rounded-lg bg-white mt-1">
-        <div className="w-auto h-fit  p-0 m-0 flex-none">Import library</div>
+        <div className="w-auto h-fit  p-0 m-0 flex-none">Import code</div>
         <div className="w-fit h-full  p-0 m-0 flex-auto ">
           <select
             className="box-border h-auto w-auto p-1 rounded-md bg-white ml-1 items-center drop-shadow-lg text-md"

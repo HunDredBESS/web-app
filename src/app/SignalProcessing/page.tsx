@@ -1,10 +1,15 @@
 import React from 'react'
 import Image from "next/image";
 
-import Import_lib from "./component-signal/1/Import";
-import Read_dataset from "./component-signal/2/Read_dataset";
-import Read_dataset2 from "./component-signal/3/DataCleaning";
 
+import Datasetload from "./component-signal/2data/Read_dataset1"
+import Datasetvit from "./component-signal/2datavit/Read_datasetvit"
+import Datasetpre from "./component-signal/2datavitpre/Read_datavit"
+import Save from "./component-signal/2save/Read_datasetnn"
+import Spi from "./component-signal/2spi/Read_dataspi"
+import Model from "./component-signal/2model/Read_datamodel"
+import Pre from "./component-signal/2predi/Read_datasetmm"
+import Sum from "./component-signal/2sumit/Read_datasetsumit"
 import Signal_img from "public/signal/signal-01.png";
 
 type Props = {}
@@ -25,27 +30,11 @@ export default function SignalProcessing({}: Props) {
             <div className="leading-relaxed text-white">
               <div className="h-auto text-lg ">
                 <p>
-                Signal Processing
-                  คือการศึกษาข้อมูลดิบที่ครอบคลุมด้วยการวิเคราะห์ข้อมูล
-                  การขุดข้อมูลที่ผ่านการจัดระบบมาแล้ว ซึ่งจุดประสงค์หลัก Data
-                  products ก็คือการตอบคำถามที่เกิดขึ้น
-                  โดยที่ไม่ได้คำนึงถึงคำตอบที่เฉพาะเจาะจง
-                  แต่จะมองไปที่ภาพรวมและหาจุดบกพร่องที่ควรได้รับการคำนึงถึงจากแหล่งข้อมูลที่สำรวจมาจากที่ต่าง
-                  ๆ และพยายามค้นหาวิธีที่ดีที่สุดในการสรุปหาผลลัพธ์ของการทำ Data
-                  Science [1]
+                Signal Processing คือ สาขาของปัญญาประดิษฐ์และการคอมพิวเตอร์ที่เน้นการประมวลผลและวิเคราะห์ที่เกี่ยวข้องกับการจัดการสัญญาณจากโดเมนเวลาไปยังความถี่และในทางกลับกัน การปรับสัญญาณให้เรียบ การแยกสัญญาณรบกวนออกจากสัญญาณ เช่น การกรอง การแยกข้อมูลจากสัญญาณ 
                 </p>
                 <br />
                 <p>
-                  Data Science เป็นแนวคิดที่รวบรวมความคิด เช่น การสำรวจข้อมูล
-                  การเรียนรู้ของเครื่องจักร
-                  และกลยุทธ์ที่เกี่ยวข้องเพื่อเข้าใจและวิเคราะห์ปรากฏการณ์จริงด้วยข้อมูล
-                  มันเป็นการขยายศาสตร์การวิเคราะห์ข้อมูลเชิงลึกเช่นการทำขุดข้อมูล
-                  สถิติ และการวิเคราะห์ทำนาย Data Science
-                  เป็นสาขาที่ใหญ่มากที่ใช้เทคนิคและแนวความคิดจากสาขาอื่น ๆ เช่น
-                  วิทยาสารสนเทศ สถิติ คณิตศาสตร์ และวิทยาการคอมพิวเตอร์
-                  บางเทคนิคที่ใช้ในวิทยาการข้อมูลรวมถึงการเรียนรู้ของเครื่องจักร
-                  การแสดงผลข้อมูล การรู้จำลักษณะ การแปรผันความน่าจะเป็นของข้อมูล
-                  วิศวกรรมข้อมูล การประมวลผลสัญญาณ ฯลฯ [2]
+                Signal Classification เป็นการจำเเนกสัญญาณสามารถระบุประเภทสัญญาณ สามารถนำไปประยุกต์ใช้ในทางการเเพทย์ได้
                 </p>
                 <br />
 
@@ -77,9 +66,30 @@ export default function SignalProcessing({}: Props) {
                   height={70}
                   alt="table"
                   className="m-1"
+                
                 /> */}
               </div>
+             
             </div>
+            <div className="lg:gap-1 my-3 leading-relaxed text-2xl font-medium  text-white">           
+            <div className="h-auto text-lg ">
+            Reference
+            </div>
+          </div>
+
+          <div className="leading-relaxed text-gray-200">
+            
+            <div className="h-auto text-lg ">
+            -    https://www.kaggle.com/competitions/uwb-pose-prediction/data
+            </div>
+            {/* <div className="h-auto text-lg ">
+            -    https://www.dailytech.in.th/image-processing/
+
+            </div>
+            <div className="h-auto text-lg ">
+            -    https://www.sas.com/th_th/insights/analytics/computer-vision.html
+            </div> */}
+          </div>
           </div>
 
           {/* <div className="text-2xl items-center box-border text-white">
@@ -88,9 +98,15 @@ export default function SignalProcessing({}: Props) {
 
           {/* <ImportBox />
            */}
-          <Import_lib />
-          <Read_dataset/>
-          <Read_dataset2/>
+          <Datasetload/>
+          <Datasetvit/>
+          <Datasetpre/>
+          <Save/>
+          <Spi/>
+          <Model/>
+          <Pre/>
+          <Sum/>
+        
         </div>
       </div>
     </div>

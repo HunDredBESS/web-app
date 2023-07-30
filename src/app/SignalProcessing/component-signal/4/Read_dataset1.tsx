@@ -4,10 +4,10 @@ import { CiCirclePlus } from "react-icons/ci";
 import { MdDeleteOutline } from "react-icons/md";
 
 import BoxNew from "../BoxComponent/BoxNew";
-import Detaildataclean from "./detail_dataclean";
+import Detail_readdataset1 from "./detail_readdataset1";
 
 import Image from "next/image";
-import Numpy_img from "public/datascience/numpy_logo.png";
+import Numpy_img from "public/signal/numpy_logo.png";
 
 type Props = {};
 
@@ -148,7 +148,7 @@ export default function DataCleaning({}: Props) {
   return (
     <>
       <div className=" box-border h-fit w-auto mt-2 border-t-1 border-gray-500"></div>
-      <Detaildataclean />
+      <Detail_readdataset1 />
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8 place-items-stretch mt-2 h-fit w-auto p-2">
 
         <div className="relative h-auto min-w-[310px] w-full p-5 rounded-lg bg-gradient-to-r from-gray-800 to-gray-800 border-1 border-black">
