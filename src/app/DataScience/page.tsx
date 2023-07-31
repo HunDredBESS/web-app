@@ -23,6 +23,10 @@ import Clean_test from "@/components/Data_Science/9Pe_testdata/Clean_datatest";
 import Prediction from "@/components/Data_Science/10prediction/Prediction";
 import SaveCSV from "@/components/Data_Science/11SaveCSV/Save_csv";
 
+import DataViz from "@/components/Data_Science/12DataViz/DataViz/DataViz";
+import DataVizBar from "@/components/Data_Science/12DataViz/DataViz_Bar/DataViz_Bar";
+import DataVizScatter from "@/components/Data_Science/12DataViz/DataViz_Scatter/DataViz_Scatter";
+
 import Image from "next/image";
 
 import Plot_img from "public/datascience/main_plot.png";
@@ -128,6 +132,11 @@ export default function DataScience({}: Props) {
           <Clean_test />
           <Prediction />
           <SaveCSV />
+
+          <DataViz />
+          <DataVizBar />
+          <DataVizScatter />
+          
         </div>
       </div>
     </div>
