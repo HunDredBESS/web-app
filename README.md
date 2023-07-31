@@ -36,7 +36,7 @@ https://www.npmjs.com/package/pm2
 git remote rm origin
 
 git add .
-git commit -m "new hub"
+git commit -m "update"
 
 git branch -M main
 git push -u origin main
