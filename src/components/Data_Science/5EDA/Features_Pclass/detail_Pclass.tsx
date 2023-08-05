@@ -39,7 +39,7 @@ export default function detail_dataclean({}: Props) {
           </summary>
 
           <p className="mt-4 mx-3 leading-relaxed text-xl text-gray-200">
-          {/* ดูความสัมพันธ์ของจำนวน พ่อ แม่ ลูก กับอัตรการรอดชีวิต */}
+            {/* ดูความสัมพันธ์ของจำนวน พ่อ แม่ ลูก กับอัตรการรอดชีวิต */}
             {/* Data cleaning and preprocessing are important steps in data science
             to prepare the data for analysis and modeling. Key techniques
             include handling missing values by removing or imputing them,
@@ -51,36 +51,37 @@ export default function detail_dataclean({}: Props) {
           </p>
           <ul className="mt-4 mx-3 leading-relaxed text-xl text-gray-200">
             <li> - ดูความสัมพันธ์ของ ticket class กับอัตรการรอดชีวิต </li>
-            
           </ul>
           <br />
-          <div className=" flex flex-row gap-10 justify-left h-auto mx-3 leading-relaxed text-xl text-gray-200">
-            
-              {/* <p className="text-center mb-1">Info</p> */}
-              <Image
-                src={Alone_img}
-                width={150}
-                height={100}
-                alt="dataset img"
-                // className="item-center "
-              />
-              <Image
-                src={Train_img}
-                width={400}
-                height={100}
-                alt="dataset img"
-                // className="item-center "
-              />
-            
-            
-            {/* <p className="text-center mb-1">drop data</p> */}
-              {/* <Image
-                src={Parch_img}
-                width={120}
-                height={300}
-                alt="dataset img"
-              /> */}
-            
+          {/* <div className="bg-yellow-200 flex grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-1 lg:mx-10 px-2 lg:px-8 leading-relaxed text-gray-200 justify-center">
+            <div className="bg-blue-200 h-6 w-6"></div>
+            <div className="bg-blue-400 h-6 w-6"></div>
+          </div> */}
+          <div
+            className=" 
+          flex flex-col sm:flex-row justify-center gap-3 h-fit "
+          >
+            {/* <p className="text-center mb-1">Info</p> */}
+            <Image
+              src={Alone_img}
+              alt="dataset img"
+              className="m-1 w-[120px] sm:w-auto h-auto sm:h-[100px] lg:h-[150px]"
+              sizes="100vw"
+              // style={{
+              //   width: "auto",
+              //   height: "100%",
+              // }}
+            />
+            <Image
+              src={Train_img}
+              alt="dataset img"
+              className="m-1 w-auto h-[70px] sm:h-[100px] lg:h-[180px]"
+              sizes="100vw"
+              style={{
+                width: "auto",
+                height: "100%",
+              }}
+            />
           </div>
         </details>
       </div>

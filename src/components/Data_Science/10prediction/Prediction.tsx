@@ -106,8 +106,8 @@ export default function DataCleaning({}: Props) {
   };
 
   const resultDeleteLine = deleteEmptyLines(formattedComponents);
-  console.log("child to parent :", dataIn);
-  console.log("from Data :", formData);
+  // console.log("child to parent :", dataIn);
+  // console.log("from Data :", formData);
 
   return (
     <>

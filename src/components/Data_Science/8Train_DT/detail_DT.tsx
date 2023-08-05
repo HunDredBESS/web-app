@@ -62,9 +62,11 @@ export default function detail_dataclean({}: Props) {
             </li> */}
           </ul>
           <br />
-          <div className=" flex flex-row gap-5 justify-center h-auto mx-3 leading-relaxed text-xl text-gray-200">
-            <Image src={Train_img} width={320} height={200} alt="dataset img" />
-            <Image src={Acc_img} width={320} height={200} alt="dataset img" />
+          <div className=" flex flex-col md:flex-row gap-5 justify-center h-auto mx-3 leading-relaxed text-xl text-gray-200 w-full">
+            <div className=" flex flex-row justify-center"><Image src={Train_img} width={320} height={200} alt="dataset img"
+             /></div>
+            <div className=" flex flex-row justify-center"><Image src={Acc_img} width={320} height={200} alt="dataset img" /></div>
+            
           </div>
         </details>
       </div>

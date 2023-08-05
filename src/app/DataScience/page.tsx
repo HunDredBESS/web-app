@@ -58,7 +58,7 @@ export default function DataScience({}: Props) {
                   โดยที่ไม่ได้คำนึงถึงคำตอบที่เฉพาะเจาะจง
                   แต่จะมองไปที่ภาพรวมและหาจุดบกพร่องที่ควรได้รับการคำนึงถึงจากแหล่งข้อมูลที่สำรวจมาจากที่ต่าง
                   ๆ และพยายามค้นหาวิธีที่ดีที่สุดในการสรุปหาผลลัพธ์ของการทำ Data
-                  Science [1]
+                  Science
                 </p>
                 <br />
                 <p>
@@ -71,7 +71,7 @@ export default function DataScience({}: Props) {
                   วิทยาสารสนเทศ สถิติ คณิตศาสตร์ และวิทยาการคอมพิวเตอร์
                   บางเทคนิคที่ใช้ในวิทยาการข้อมูลรวมถึงการเรียนรู้ของเครื่องจักร
                   การแสดงผลข้อมูล การรู้จำลักษณะ การแปรผันความน่าจะเป็นของข้อมูล
-                  วิศวกรรมข้อมูล การประมวลผลสัญญาณ ฯลฯ [2]
+                  วิศวกรรมข้อมูล การประมวลผลสัญญาณ ฯลฯ
                 </p>
                 <br />
 
@@ -81,28 +81,27 @@ export default function DataScience({}: Props) {
                 dimensionality reduction. scikit-learn also provides tools for
                 model evaluation and selection. */}
               </div>
-              <div className=" flex flex-row  justify-center h-50">
+              <div className=" flex flex-row justify-center h-[100px] sm:h-[200px] lg:h-[240px]">
                 <Image
                   src={Plot_img}
-                  width={300}
-                  height={70}
                   alt="plot 101"
-                  className="m-1"
+                  className="m-1 w-auto h-full"
+                  sizes="100vw"
+                  style={{
+                    width: "auto",
+                    height: "100%",
+                  }}
                 />
                 <Image
                   src={Corr_img}
-                  width={300}
-                  height={70}
                   alt="plot corr"
-                  className="m-1"
+                  className="m-1 w-auto h-full"
+                  sizes="100vw"
+                  style={{
+                    width: "auto",
+                    height: "100%",
+                  }}
                 />
-                {/* <Image
-                  src={Table_img}
-                  width={400}
-                  height={70}
-                  alt="table"
-                  className="m-1"
-                /> */}
               </div>
             </div>
           </div>
@@ -136,7 +135,6 @@ export default function DataScience({}: Props) {
           <DataViz />
           <DataVizBar />
           <DataVizScatter />
-          
         </div>
       </div>
     </div>

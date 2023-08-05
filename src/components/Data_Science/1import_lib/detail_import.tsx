@@ -39,7 +39,7 @@ function detail_import({}: Props) {
             </span>
           </summary>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-1 lg:mx-10 px-2 lg:px-8 leading-relaxed  text-gray-200">
             <div className="h-auto text-xl ">numpy</div>
             <div className="h-auto text-lg ">
               เป็นไลบรารีที่มีความสามารถในการคำนวณทางตัวเลขอย่างมีประสิทธิภาพและมีประสิทธิภาพสูง
@@ -54,7 +54,7 @@ function detail_import({}: Props) {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-1 lg:mx-10 px-2 lg:px-8 leading-relaxed  text-gray-200">
             <div className="h-auto text-xl">pandas</div>
             <div className="h-auto text-lg ">
               ไลบรารีที่ทีความสามารถในการจัดการและวิเคราะห์ข้อมูลในภาษา python
@@ -79,7 +79,7 @@ function detail_import({}: Props) {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-1 lg:mx-10 px-2 lg:px-8 leading-relaxed  text-gray-200">
             <div className="h-auto text-xl">matplotlib</div>
             <div className="h-auto text-lg ">
               ไลบรารีที่ใช้สำหรับการแสดงผลข้อมูลในรูปแบบกราฟใน python
@@ -95,7 +95,7 @@ function detail_import({}: Props) {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-1 lg:mx-10 px-2 lg:px-8 leading-relaxed  text-gray-200">
             <div className="h-auto text-xl">Seaborn</div>
             <div className="h-auto text-lg ">
               ไลบรารีการแสดงผลข้อมูลที่พัฒนาขึ้นบน matplotlib โดย Seaborn
@@ -110,7 +110,7 @@ function detail_import({}: Props) {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[120px_1fr] lg:gap-1 my-3 mx-1 lg:mx-10 px-2 lg:px-8 leading-relaxed text-gray-200">
             <div className="h-auto text-xl">scikit-learn</div>
             <div className="h-auto text-lg ">
               scikit-learn เป็นไลบรารีที่ครอบคลุมและทันสมัยสำหรับ machine
@@ -124,27 +124,83 @@ function detail_import({}: Props) {
               and selection. */}
             </div>
           </div>
-          <div className=" flex flex-row justify-center h-20">
-            <Image src={Numpy_img} width={90} height={80} alt="numpy Logo" />
-            <Image src={Pandas_img} width={150} height={80} alt="pandas Logo" />
-            <Image
-              src={Matplotlib_img}
-              width={180}
-              height={80}
-              alt="matplotlib Logo"
-            />
-            <Image
-              src={Seaborn_img}
-              width={90}
-              height={80}
-              alt="seaborn Logo"
-            />
-            <Image
-              src={Sklearn_img}
-              width={150}
-              height={80}
-              alt="sklearn Logo"
-            />
+          <div
+            className=" grid grid-flow-col auto-cols-auto gap-3 w-full justify-center m-4 ">
+            <div
+              className="
+            flex flex-row justify-center h-[30px] sm:h-[50px] lg:h-[70px] w-fit"
+            >
+              <Image
+                src={Numpy_img}
+                alt="numpy Logo"
+                className="m-1 w-auto h-full"
+                sizes="100vw"
+                style={{
+                  width: "auto",
+                  height: "100%",
+                }}
+              />
+            </div>
+            <div
+              className="
+            flex flex-row justify-center h-[30px] sm:h-[50px] lg:h-[70px] w-fit"
+            >
+              <Image
+                src={Pandas_img}
+                alt="numpy Logo"
+                className="m-1 w-auto h-full"
+                sizes="100vw"
+                style={{
+                  width: "auto",
+                  height: "100%",
+                }}
+              />
+            </div>
+            <div
+              className=" 
+            flex flex-row justify-center h-[30px] sm:h-[50px] lg:h-[70px] w-fit"
+            >
+              <Image
+                src={Matplotlib_img}
+                alt="matplotlib Logo"
+                className="m-1 w-auto h-full"
+                sizes="100vw"
+                style={{
+                  width: "auto",
+                  height: "100%",
+                }}
+              />
+            </div>
+            <div
+              className="
+            flex flex-row justify-center h-[30px] sm:h-[50px] lg:h-[70px] w-fit"
+            >
+              <Image
+                src={Seaborn_img}
+                alt="seaborn Logo"
+                className="m-1 w-auto h-full"
+                sizes="100vw"
+                style={{
+                  width: "auto",
+                  height: "100%",
+                }}
+              />
+            </div>
+            <div
+              className="
+            flex flex-row justify-center h-[30px] sm:h-[50px] lg:h-[70px] w-fit"
+            >
+              <Image
+                src={Sklearn_img}
+                alt="sklearn Logo"
+                className="m-1 w-auto h-full"
+                sizes="100vw"
+                style={{
+                  width: "auto",
+                  height: "100%",
+                }}
+              />
+            </div>
           </div>
         </details>
       </div>

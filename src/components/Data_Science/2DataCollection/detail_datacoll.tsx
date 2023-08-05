@@ -52,16 +52,19 @@ function detail_datacoll({}: Props) {
             opinion-based information */}
           </p>
           <br />
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[200px_1fr] lg:gap-1 my-3 mx-10 px-8 leading-relaxed  text-gray-200">
+          <div className="grid grid-cols-1 gap-1 lg:grid-cols-[200px_1fr] lg:gap-1 my-3 mx-1 md:mx-10 px-0 md:px-8 leading-relaxed  text-gray-200">
             <div className="h-auto text-xl ">ตัวอย่าง Titanic Dataset</div>
-            <div className="h-auto text-xl ">
-              <a
-                href="https://www.kaggle.com/competitions/titanic/"
-                className="text-blue-300 hover:text-blue-600"
-                target="_blank"
-              >
-                https://www.kaggle.com/competitions/titanic/
-              </a>
+            <div className="h-auto text-md md:text-xl ">
+              
+                <a
+                  href="https://www.kaggle.com/competitions/titanic/"
+                  className="text-blue-300 hover:text-blue-600 w-fit h-fit"
+                  target="_blank"
+                >
+                  https://www.kaggle.com/competitions/titanic/
+                  
+                </a>
+              
             </div>
           </div>
           <p className="mt-4 leading-relaxed text-xl text-gray-200">
